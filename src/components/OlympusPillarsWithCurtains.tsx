@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { RotateCcw } from 'lucide-react';
-import { UmangLogo } from './UmangLogo';
+import sportsLogo from '../assets/images/umang_logo_2026_official_1790845519583.jpg';
 
 /*
  * Put these four images in:
@@ -515,7 +515,10 @@ export const OlympusPillarsWithCurtains: React.FC<
         <Curtain side="left" isOpening={isOpening} />
         <Curtain side="right" isOpening={isOpening} />
 
-        {/* Center logo */}
+        {/* =============================================================== */}
+        {/* CENTER LOGO - USE THE COMPLETE LOGO IMAGE                       */}
+        {/* =============================================================== */}
+
         <div
           onClick={triggerCurtainOpen}
           className={`
@@ -527,6 +530,15 @@ export const OlympusPillarsWithCurtains: React.FC<
             -translate-y-1/2
 
             z-[200]
+
+            w-[clamp(82px,30vw,190px)]
+            h-[clamp(82px,30vw,190px)]
+
+            max-w-[44vw]
+            max-h-[44vw]
+
+            aspect-square
+            shrink-0
 
             cursor-pointer
 
@@ -553,52 +565,53 @@ export const OlympusPillarsWithCurtains: React.FC<
             }
           }}
         >
-          <div
+          {/* The supplied logo is already a complete circular artwork.
+              Using it directly prevents the internal UMANG artwork from
+              being cropped by the previous UmangLogo wrapper. */}
+          <img
+            src={sportsLogo}
+            alt="UMANG 26 sports logo"
+            draggable={false}
             className="
-              relative
-              p-3
-              sm:p-4
+              block
+
+              w-full
+              h-full
+
+              max-w-full
+              max-h-full
+
+              aspect-square
+
+              object-cover
 
               rounded-full
 
-              bg-gradient-to-tr
-              from-[#80601D]
-              via-[#FFE99A]
-              to-[#F5B81C]
+              select-none
+              pointer-events-none
 
-              shadow-[
-                0_0_50px_rgba(245,184,28,0.55),
-                0_0_120px_rgba(0,0,0,0.90)
-              ]
-
-              transition-transform
-              duration-500
-
-              hover:scale-105
-              active:scale-95
+              drop-shadow-[0_0_28px_rgba(245,184,28,0.45)]
             "
-          >
-            <UmangLogo
-              size="2xl"
-              withRing
-              withGlow
-            />
-          </div>
+          />
 
+          {/* Additional soft glow, kept behind the complete image */}
           <div
             className="
               absolute
-              inset-[-35px]
+              inset-[-clamp(10px,3vw,24px)]
               -z-10
 
               rounded-full
 
               bg-[#F5B81C]/10
 
-              blur-3xl
+              blur-2xl
+
+              pointer-events-none
             "
           />
         </div>
+
       </div>
 
       {/* Replay button */}
