@@ -1,0 +1,8 @@
+{
+  "name": "Remix UMANG 2026 - Olympus Reborn | IIIT Bangalore Sports Fest",
+  "description": "Official sports registration website for UMANG 2026, the annual sports festival of IIIT Bangalore. Theme: Olympus Reborn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

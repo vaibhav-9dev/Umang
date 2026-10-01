@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cinzel-dec: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Umang '26 Deepest Olympian Midnight Obsidian & Radiant Greek Gold Palette */
+  --color-obsidian: #01040E;
+  --color-stone-dark: #020617;
+  --color-stone-card: #03091F;
+  --color-stone-card-hover: #07123A;
+  --color-olympian-royal: #0B1D54;
+  --color-olympian-navy: #01040F;
+  --color-olympian-azure: #133385;
+  
+  --color-gold: #F5B81C;
+  --color-gold-light: #FFC72C;
+  --color-gold-bright: #FFE066;
+  --color-gold-dark: #C99008;
+  --color-bronze: #996E24;
+  --color-marble: #F8FAFC;
+  --color-stone-gray: #94A3B8;
+}
+
+/* Custom Greek & Olympian aesthetic styling */
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-cinzel-dec {
+  font-family: var(--font-cinzel-dec);
+}
+
+/* Greek Meander Key Pattern Border in Logo Gold */
+.greek-border-bottom {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #f5b81c 0,
+    #f5b81c 8px,
+    transparent 8px,
+    transparent 12px,
+    #f5b81c 12px,
+    #f5b81c 16px,
+    transparent 16px,
+    transparent 24px
+  );
+  background-size: 24px 2px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* Olympian Gold Gradient Text matching Umang '26 lettering */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFDF0 0%, #FFC72C 35%, #F5B81C 70%, #C99008 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #F5B81C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Deep Dark Olympian Glows */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(245, 184, 28, 0.28);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 45px rgba(245, 184, 28, 0.4), 0 0 85px rgba(11, 29, 84, 0.65);
+}
+
+.sapphire-glow {
+  box-shadow: 0 0 35px rgba(11, 29, 84, 0.55), inset 0 0 20px rgba(245, 184, 28, 0.15);
+}
+
+/* Olympian Key Border Accent */
+.greek-key-accent {
+  background-image: radial-gradient(circle at 50% 50%, rgba(245, 184, 28, 0.12) 0%, transparent 70%);
+}
+
+/* Deep Celestial Starfield in Midnight Sky */
+.olympian-stars-bg {
+  background-color: #01040E;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 40px 70px, rgba(245, 184, 28, 0.8), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 160px 120px, rgba(255, 224, 102, 0.9), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 230px 190px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 290px 80px, rgba(245, 184, 28, 0.6), rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 320px 320px;
+}
+
+/* Custom scrollbar in Olympian dark obsidian & gold */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #01040E;
+}
+::-webkit-scrollbar-thumb {
+  background: #07123A;
+  border-radius: 4px;
+  border: 1px solid #0B1D54;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5B81C;
+}
+
+/* Pure White Grecian Drapery & Curtain Fabric Texture */
+.white-curtain-fabric {
+  background-color: #FFFFFF;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #FFFFFF 0px,
+    #FAFAFA 15px,
+    #F4F4F5 28px,
+    #E4E4E7 38px,
+    #D4D4D8 44px,
+    #E4E4E7 50px,
+    #FAFAFA 62px,
+    #FFFFFF 76px
+  );
+}
+
+.white-curtain-shimmer {
+  background-image: radial-gradient(
+    circle at 50% 35%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(250, 250, 250, 0.7) 45%,
+    rgba(228, 228, 231, 0.3) 100%
+  );
+}
+
+/* Greek Cream Marble Pillar Styling (Pentelic/Parian warm ivory cream stone) */
+.greek-cream-pillar {
+  filter: sepia(0.32) saturate(1.3) brightness(1.04) contrast(1.08) hue-rotate(-6deg);
+}
+
+.greek-cream-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(254, 250, 240, 0.28) 0%,
+    rgba(247, 240, 222, 0.18) 50%,
+    rgba(240, 230, 206, 0.3) 100%
+  );
+  mix-blend-mode: color;
+}
+
+
