@@ -152,14 +152,9 @@ export const TeamSection: React.FC = () => {
           {filteredGroups.map((group) => (
             <div key={group.id} className="relative">
               {/* Group Header */}
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#F5B81C]/25">
-                <div>
-                  <div className="inline-flex items-center gap-2 mb-2">
-                    {getTeamIcon(group.id)}
-                    <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C]">
-                      {group.badge}
-                    </span>
-                  </div>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-3 border-b border-[#F5B81C]/25">
+                <div className="flex items-center gap-2.5">
+                  {getTeamIcon(group.id)}
                   <h3 className="font-cinzel text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-[#F8FAFC]">
                     {group.name}
                   </h3>

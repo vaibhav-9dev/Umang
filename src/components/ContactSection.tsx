@@ -29,7 +29,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-[#01040E] overflow-hidden" id="contact">
+    <section className="relative pt-4 sm:pt-6 pb-20 sm:pb-28 bg-[#01040E] overflow-hidden" id="contact">
       {/* Background Campus Athletics Visual - Clear and Visible in Dark Theme */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
@@ -47,32 +47,28 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex justify-center mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <div className="flex justify-center mb-2">
             <UmangLogo size="sm" withGlow withRing />
           </div>
 
-          <div className="inline-flex items-center justify-center gap-2 mb-3">
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C]" />
+          <div className="inline-flex items-center justify-center gap-2 mb-1.5">
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C]" />
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.28em] text-[#F5B81C]">
-              VENUE & OFFICIAL COMMUNICATIONS
+              UMANG 2026
             </span>
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C] scale-x-[-1]" />
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C] scale-x-[-1]" />
           </div>
 
-          <h2 className="font-cinzel text-3xl sm:text-5xl font-black uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
+          <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
             CONTACT & DIRECTIONS
           </h2>
 
-          <p className="font-cinzel text-sm sm:text-base font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-2">
-            STUDENT COORDINATORS · SATELLITE RADAR · E-CITY & EXTENSION CAMPUSES
+          <p className="font-cinzel text-xs sm:text-sm font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-1.5">
+            STUDENT COORDINATORS · SATELLITE RADAR · CAMPUSES
           </p>
 
-          <p className="font-sans text-sm sm:text-base text-[#94A3B8] mt-4 leading-relaxed font-light">
-            Connect directly with our sports leads, explore satellite directions to the IIIT Bangalore E-City Campus & Extension Campus, and follow Umang on Instagram.
-          </p>
-
-          <div className="mt-6 flex items-center justify-center">
+          <div className="mt-3.5 flex items-center justify-center">
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
           </div>
         </div>
@@ -80,12 +76,9 @@ export const ContactSection: React.FC = () => {
         {/* ============================================================ */}
         {/* 1. THREE STUDENT CONTACT COORDINATORS WITH HOVER SOCIALS & PHONES */}
         {/* ============================================================ */}
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-8 pb-3 border-b border-[#F5B81C]/20">
+        <div className="mb-12">
+          <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-[#F5B81C]/20">
             <div>
-              <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C] block">
-                DIRECT FESTIVAL LIAISONS
-              </span>
               <h3 className="font-cinzel text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-[#F8FAFC]">
                 STUDENT COORDINATORS
               </h3>

@@ -117,7 +117,7 @@ export const CONTACT_CONFIG = {
     fullAddress: "65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru, Karnataka 560114"
   },
   contacts: {
-    sportsEmail: "umang@iiitb.ac.in",
+    sportsEmail: "sportscomm@iiitb.ac.in",
     generalEmail: "sportscomm@iiitb.ac.in",
     studentConvenorPhone: "+91 80 4140 7777",
     helpdeskHours: "09:00 AM - 08:00 PM IST"

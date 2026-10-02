@@ -23,155 +23,133 @@ export const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top 4-Column Grid: Brand, Address & College Details, Contact Info & Leads, Umang Socials */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        {/* Top 3-Column Grid: Contact Info & Leads, Campuses & Addresses, Umang Socials */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-white/10">
           
-          {/* Column 1: Brand & Theme (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col">
-            <div className="flex items-center gap-3 mb-3">
-              <UmangLogo size="md" withGlow withRing />
-              <div className="flex flex-col">
-                <span className="font-cinzel text-xl font-bold tracking-[0.2em] text-[#F8FAFC]">
-                  UMANG &apos;26
-                </span>
-                <span className="font-cinzel text-[9px] uppercase tracking-[0.24em] text-[#F5B81C]">
-                  IIIT BANGALORE
-                </span>
-              </div>
-            </div>
-
-            <p className="font-cinzel text-xs font-bold uppercase tracking-[0.24em] text-[#FFC72C] mb-2">
-              OLYMPUS REBORN
-            </p>
-
-            <p className="font-sans text-xs text-[#94A3B8] leading-relaxed mb-4">
-              The flagship annual sports festival of the International Institute of Information Technology Bangalore. Where legends rise, champions compete, and Olympus comes alive again.
-            </p>
-
-            <div className="mt-auto flex items-center gap-2 text-xs font-cinzel tracking-wider text-[#F5B81C]/80">
-              <GreekColumnIcon className="w-3 h-5 text-[#F5B81C]/60" />
-              <span>IIIT BANGALORE · SPORTS FESTIVAL</span>
-            </div>
-          </div>
-
-          {/* Column 2: College Campuses & Addresses (4 cols) */}
+          {/* Column 1: Contact Info & Student Leads (4 cols) */}
           <div className="lg:col-span-4 flex flex-col">
-            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4 flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-[#F5B81C]" />
-              CAMPUSES & ADDRESSES
+            <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4 flex items-center gap-2">
+              <Phone className="w-4 h-4 text-[#F5B81C]" />
+              CONTACT INFO & LEADS
             </span>
 
-            <div className="font-sans text-xs text-[#94A3B8] space-y-4 leading-relaxed">
-              {/* Main E-City Campus */}
-              <div className="p-3 bg-[#03091F] border border-[#F5B81C]/20 rounded-none space-y-1">
-                <div className="flex items-center justify-between">
-                  <strong className="text-[#F8FAFC] block font-cinzel text-[11px] uppercase tracking-wider text-[#FFC72C]">
-                    E-City Main Campus
-                  </strong>
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 bg-[#F5B81C]/15 text-[#FFC72C] border border-[#F5B81C]/30">
-                    560100
-                  </span>
-                </div>
-                <p className="text-[11px] text-[#94A3B8]">
-                  26/C, Electronic City Phase 1, Hosur Road, Bengaluru, Karnataka
-                </p>
-                <p className="text-[10px] text-[#94A3B8]/70 italic">
-                  Landmark: Opposite Infosys Gate 1
-                </p>
-                <div className="pt-1">
-                  <a
-                    href={CONTACT_CONFIG.campuses[0].map.directionsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] text-[#FFC72C] hover:underline"
-                  >
-                    <span>Open in Maps</span>
-                    <ExternalLink className="w-2.5 h-2.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Extension Campus */}
-              <div className="p-3 bg-[#03091F] border border-[#F5B81C]/20 rounded-none space-y-1">
-                <div className="flex items-center justify-between">
-                  <strong className="text-[#F8FAFC] block font-cinzel text-[11px] uppercase tracking-wider text-[#FFC72C]">
-                    Hosa Road Extension Campus
-                  </strong>
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 bg-[#F5B81C]/15 text-[#FFC72C] border border-[#F5B81C]/30">
-                    560114
-                  </span>
-                </div>
-                <p className="text-[11px] text-[#94A3B8]">
-                  65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru, Karnataka
-                </p>
-                <p className="text-[10px] text-[#94A3B8]/70 italic">
-                  Landmark: Off Hosa Road, Near Singasandra
-                </p>
-                <div className="pt-1">
-                  <a
-                    href={CONTACT_CONFIG.campuses[1].map.directionsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] text-[#FFC72C] hover:underline"
-                  >
-                    <span>Open in Maps</span>
-                    <ExternalLink className="w-2.5 h-2.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 3: Contact Info & Student Leads (2.5 cols) */}
-          <div className="lg:col-span-2 flex flex-col">
-            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4 flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#F5B81C]" />
-              CONTACT INFO
-            </span>
-
-            <div className="font-sans text-xs text-[#94A3B8] space-y-3">
+            <div className="font-sans space-y-4">
               <div>
-                <span className="text-[10px] uppercase font-cinzel text-[#94A3B8]/70 block tracking-wider">Helpdesk Email</span>
+                <span className="text-[11px] uppercase font-cinzel text-[#FFC72C] block tracking-wider font-semibold">
+                  Helpdesk Email
+                </span>
                 <a
                   href={`mailto:${CONTACT_CONFIG.contacts.sportsEmail}`}
-                  className="text-[#F8FAFC] hover:text-[#FFC72C] transition-colors break-all"
+                  className="text-xs sm:text-[13px] font-medium text-[#F8FAFC] hover:text-[#FFC72C] transition-colors break-all block mt-0.5"
                 >
                   {CONTACT_CONFIG.contacts.sportsEmail}
                 </a>
               </div>
 
               {/* Three Contact Persons & Mobile Numbers */}
-              <div className="pt-1 border-t border-white/5 space-y-2">
-                <span className="text-[10px] uppercase font-cinzel text-[#FFC72C] block tracking-wider font-semibold">
+              <div className="pt-2 border-t border-white/10 space-y-2.5">
+                <span className="text-[11px] uppercase font-cinzel text-[#FFC72C] block tracking-wider font-bold">
                   STUDENT LEADS
                 </span>
                 
                 {CONTACT_CONFIG.coordinators.map((c) => (
-                  <div key={c.id} className="text-[11px]">
-                    <span className="text-[#F8FAFC] block font-medium truncate">{c.name}</span>
+                  <div key={c.id} className="pb-1.5 border-b border-white/5 last:border-0 last:pb-0">
+                    <span className="text-xs sm:text-[13px] text-[#F8FAFC] block font-semibold truncate">
+                      {c.name}
+                    </span>
                     <a
                       href={`tel:${c.phoneRaw}`}
-                      className="font-mono text-[#94A3B8] hover:text-[#FFC72C] transition-colors flex items-center gap-1 mt-0.5"
+                      className="font-mono text-xs sm:text-[13px] font-medium text-[#E2E8F0] hover:text-[#FFC72C] transition-colors flex items-center gap-1.5 mt-0.5"
                     >
-                      <Phone className="w-2.5 h-2.5 text-[#F5B81C]" />
+                      <Phone className="w-3 h-3 text-[#F5B81C]" />
                       <span>{c.phone}</span>
                     </a>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-1 border-t border-white/5">
-                <span className="text-[10px] uppercase font-cinzel text-[#94A3B8]/70 block tracking-wider">Campus Desk</span>
-                <span className="text-[#F8FAFC] font-mono text-xs">
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-[11px] uppercase font-cinzel text-[#FFC72C] block tracking-wider font-semibold">
+                  Campus Desk
+                </span>
+                <span className="text-[#F8FAFC] font-mono text-xs sm:text-[13px] font-medium block mt-0.5">
                   {CONTACT_CONFIG.contacts.studentConvenorPhone}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Column 4: College Umang Social Media (2.5 cols) */}
+          {/* Column 2: College Campuses & Addresses (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col">
+            <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4 flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#F5B81C]" />
+              CAMPUSES & VENUES
+            </span>
+
+            <div className="font-sans text-xs sm:text-sm text-[#94A3B8] space-y-3.5 leading-relaxed">
+              {/* Main E-City Campus */}
+              <div className="p-3.5 bg-[#03091F] border border-[#F5B81C]/25 rounded-none space-y-1.5 shadow-md">
+                <div className="flex items-center justify-between">
+                  <strong className="text-[#FFC72C] block font-cinzel text-xs sm:text-sm uppercase tracking-wider font-bold">
+                    E-City Main Campus
+                  </strong>
+                  <span className="text-[11px] font-mono font-bold px-1.5 py-0.5 bg-[#F5B81C]/20 text-[#FFC72C] border border-[#F5B81C]/40">
+                    560100
+                  </span>
+                </div>
+                <p className="text-xs sm:text-[13px] text-[#CBD5E1] leading-relaxed">
+                  26/C, Electronic City Phase 1, Hosur Road, Bengaluru, Karnataka
+                </p>
+                <p className="text-[11px] sm:text-xs text-[#94A3B8] italic">
+                  Landmark: Opposite Infosys Gate 1
+                </p>
+                <div className="pt-1.5">
+                  <a
+                    href={CONTACT_CONFIG.campuses[0].map.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold text-[#FFC72C] hover:underline"
+                  >
+                    <span>Open in Maps</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Extension Campus */}
+              <div className="p-3.5 bg-[#03091F] border border-[#F5B81C]/25 rounded-none space-y-1.5 shadow-md">
+                <div className="flex items-center justify-between">
+                  <strong className="text-[#FFC72C] block font-cinzel text-xs sm:text-sm uppercase tracking-wider font-bold">
+                    Hosa Road Extension
+                  </strong>
+                  <span className="text-[11px] font-mono font-bold px-1.5 py-0.5 bg-[#F5B81C]/20 text-[#FFC72C] border border-[#F5B81C]/40">
+                    560114
+                  </span>
+                </div>
+                <p className="text-xs sm:text-[13px] text-[#CBD5E1] leading-relaxed">
+                  65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru
+                </p>
+                <p className="text-[11px] sm:text-xs text-[#94A3B8] italic">
+                  Landmark: Off Hosa Road, Near Singasandra
+                </p>
+                <div className="pt-1.5">
+                  <a
+                    href={CONTACT_CONFIG.campuses[1].map.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold text-[#FFC72C] hover:underline"
+                  >
+                    <span>Open in Maps</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: College Umang Social Media (3 cols) */}
           <div className="lg:col-span-3 flex flex-col">
-            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4">
+            <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4">
               COLLEGE & UMANG SOCIALS
             </span>
 
@@ -284,9 +262,11 @@ export const Footer: React.FC = () => {
             </button>
           </nav>
 
-          <div className="flex items-center gap-2 text-xs font-cinzel tracking-wider text-[#F5B81C]">
-            <GreekColumnIcon className="w-3 h-5 text-[#F5B81C]" />
-            <span>IIIT BANGALORE · OLYMPUS REBORN</span>
+          <div className="flex items-center gap-2.5 text-xs font-cinzel tracking-wider text-[#F5B81C]">
+            <UmangLogo size="xs" />
+            <span className="font-bold text-[#F8FAFC]">UMANG &apos;26</span>
+            <span className="text-[#F5B81C]/50">·</span>
+            <span>IIIT BANGALORE</span>
           </div>
         </div>
 
