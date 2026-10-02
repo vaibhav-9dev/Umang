@@ -66,28 +66,20 @@ export const SportsSection: React.FC<SportsSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center gap-2 mb-3">
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C]" />
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="inline-flex items-center justify-center gap-2 mb-2">
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C]" />
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.28em] text-[#F5B81C]">
-              CHOOSE YOUR ARENA
+              UMANG 2026
             </span>
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C] scale-x-[-1]" />
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C] scale-x-[-1]" />
           </div>
 
-          <h2 className="font-cinzel text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
+          <h2 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
             ENTER THE ARENA
           </h2>
 
-          <p className="font-cinzel text-base sm:text-lg font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-2">
-            CHOOSE YOUR BATTLEFIELD.
-          </p>
-
-          <p className="font-sans text-sm sm:text-base text-[#94A3B8] mt-4 leading-relaxed font-light">
-            Select your sport and register directly through its official Google Form. Every contest is forged for those who dare to seek immortal glory.
-          </p>
-
-          <div className="mt-6 flex items-center justify-center">
+          <div className="mt-4 flex items-center justify-center">
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
           </div>
         </div>

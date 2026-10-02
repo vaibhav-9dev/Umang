@@ -77,19 +77,15 @@ export const IntroSection: React.FC = () => {
 
             {/* Monumental Section Title */}
             <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-[0.16em] text-[#F8FAFC] leading-tight">
-              THE OLYMPUS CALLS
+              THE ARENAS AWAIT
             </h2>
 
             {/* Gold Hairline Divider */}
             <div className="w-24 h-[2px] bg-gradient-to-r from-[#F5B81C] to-transparent my-6" />
 
             {/* Narrative text */}
-            <p className="font-sans text-base sm:text-lg text-[#94A3B8] leading-relaxed mb-6 font-light">
+            <p className="font-sans text-base sm:text-lg text-[#94A3B8] leading-relaxed mb-8 font-light">
               Umang returns in 2026, bringing athletes and teams together for a celebration of competition, athleticism and campus spirit. Choose your arena. Gather your team. Enter the games.
-            </p>
-
-            <p className="font-sans text-sm sm:text-base text-[#94A3B8]/80 leading-relaxed mb-10 font-light">
-              Rooted in the eternal legacy of ancient Olympia and ignited by the fierce collegiate pride of IIIT Bangalore, every match is a crucible of determination, team synergy, and relentless passion.
             </p>
 
             {/* Roman-inspired Three Stat Pillars */}
@@ -121,16 +117,16 @@ export const IntroSection: React.FC = () => {
                 </span>
               </div>
 
-              {/* Stat 3: 01 Olympus */}
+              {/* Stat 3: Edition */}
               <div className="flex flex-col">
                 <span className="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#F5B81C] mb-1">
-                  PANTHÉON
+                  EDITION
                 </span>
                 <span className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-black text-gold-gradient tracking-tight tabular-nums">
-                  01
+                  2026
                 </span>
                 <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#F8FAFC] uppercase mt-1">
-                  OLYMPUS
+                  ANNUAL
                 </span>
               </div>
 

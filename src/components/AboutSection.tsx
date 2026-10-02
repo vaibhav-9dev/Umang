@@ -41,7 +41,7 @@ export const AboutSection: React.FC = () => {
         {/* Narrative Copy */}
         <div className="max-w-3xl mx-auto">
           <p className="font-sans text-base sm:text-xl text-[#F8FAFC]/90 leading-relaxed font-light mb-6">
-            Umang 2026 brings together students and athletes for a celebration of sport, competition and community. Inspired by the legendary arenas of Olympus, this year&apos;s edition invites every competitor to step forward and create their own legend.
+            Umang 2026 brings together students and athletes for a celebration of sport, competition and community. This year&apos;s edition invites every competitor to step forward and create their own legend.
           </p>
 
           <p className="font-sans text-sm sm:text-base text-[#94A3B8] leading-relaxed font-light mb-12">

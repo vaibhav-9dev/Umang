@@ -48,11 +48,11 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
   };
 
   return (
-    <div className="min-h-screen bg-[#01040E] text-[#F8FAFC] pt-24 pb-20">
+    <div className="min-h-screen bg-[#01040E] text-[#F8FAFC] pt-16 sm:pt-20 pb-16">
       
       {/* Top Banner / Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div className="flex items-center justify-between py-3 border-b border-[#F5B81C]/20 text-xs font-cinzel">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-3 sm:mb-4">
+        <div className="flex items-center justify-between py-2 border-b border-[#F5B81C]/20 text-xs font-cinzel">
           <div className="flex items-center gap-2 text-[#94A3B8]">
             <button onClick={navigateToHome} className="hover:text-[#F5B81C] transition-colors uppercase tracking-wider cursor-pointer">
               HOME
@@ -71,38 +71,30 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex justify-center mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <div className="flex justify-center mb-2">
             <UmangLogo size="sm" withGlow withRing />
           </div>
 
-          <div className="inline-flex items-center justify-center gap-2 mb-3">
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C]" />
+          <div className="inline-flex items-center justify-center gap-2 mb-1.5">
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C]" />
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.28em] text-[#F5B81C]">
-              CHOOSE YOUR ARENA
+              UMANG 2026
             </span>
-            <LaurelWreath className="w-5 h-5 text-[#F5B81C] scale-x-[-1]" />
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C] scale-x-[-1]" />
           </div>
 
-          <h1 className="font-cinzel text-4xl sm:text-6xl font-black uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
+          <h1 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight">
             ENTER THE ARENA
           </h1>
 
-          <p className="font-cinzel text-base sm:text-lg font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-2">
-            CHOOSE YOUR BATTLEFIELD
-          </p>
-
-          <p className="font-sans text-sm sm:text-base text-[#94A3B8] mt-4 leading-relaxed font-light">
-            Select your sport to view full tournament rules, arena galleries, and register directly through official Google Forms.
-          </p>
-
-          <div className="mt-6 flex items-center justify-center">
+          <div className="mt-3.5 flex items-center justify-center">
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
           </div>
         </div>
 
         {/* Filter and Search Bar */}
-        <div className="mb-12 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-2 bg-[#03091F]/95 border border-[#F5B81C]/35 shadow-xl">
+        <div className="mb-8 sm:mb-10 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-2 bg-[#03091F]/95 border border-[#F5B81C]/35 shadow-xl">
           {/* Segmented Filter Buttons */}
           <div className="flex items-center gap-1 overflow-x-auto p-1 text-xs">
             <button
@@ -169,17 +161,17 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
               return (
                 <div
                   key={sport.id}
-                  className="group relative bg-[#03091F]/95 border border-[#F5B81C]/30 hover:border-[#F5B81C] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-[0_0_35px_rgba(245,184,28,0.25)]"
+                  className="group relative bg-[#03091F]/95 border border-[#F5B81C]/30 hover:border-[#F5B81C] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-[0_0_35px_rgba(245,184,28,0.25)] min-h-[390px] sm:min-h-[430px]"
                 >
                   {/* Clearly visible background sport arena/action image */}
-                  <div className="absolute inset-0 z-0 opacity-35 group-hover:opacity-60 transition-opacity pointer-events-none">
+                  <div className="absolute inset-0 z-0 opacity-45 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none">
                     <img
                       src={sport.heroImage}
                       alt={sport.name}
-                      className="w-full h-full object-cover filter brightness-105 contrast-120 saturate-110 group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-center filter brightness-110 contrast-125 saturate-110 group-hover:scale-105 transition-transform duration-700"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#01040E] via-[#03091F]/70 to-[#01040E]/35" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#01040E] via-[#01040E]/40 to-[#01040E]/20" />
                   </div>
 
                   {/* Classical Corner Notches */}
@@ -192,7 +184,7 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                     {/* Header */}
                     <div className="flex items-center justify-between border-b border-white/5 pb-3 mb-4">
                       <span className="font-cinzel text-xs font-bold text-[#F5B81C] tracking-[0.2em]">
-                        ARENA {sport.orderNumber} · {sport.greekDeity}
+                        ARENA {sport.orderNumber}
                       </span>
                       <span className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#FFC72C]/90">
                         {sport.events.length} {sport.events.length === 1 ? 'EVENT' : 'EVENTS'}
@@ -200,19 +192,9 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                     </div>
 
                     {/* Name */}
-                    <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] group-hover:text-[#FFC72C] transition-all">
+                    <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] group-hover:text-[#FFC72C] transition-all mb-6">
                       {sport.name}
                     </h3>
-
-                    {/* Subtitle */}
-                    <p className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#F5B81C] mt-1 mb-3">
-                      {sport.subtitle}
-                    </p>
-
-                    {/* Mythos Quote */}
-                    <p className="font-sans text-xs text-[#94A3B8] italic leading-relaxed mb-6 font-light">
-                      &ldquo;{sport.mythosQuote}&rdquo;
-                    </p>
 
                     {/* Events List / Quick Drawer */}
                     <div className="mt-auto pt-4 border-t border-white/5">

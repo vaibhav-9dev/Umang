@@ -7,10 +7,10 @@ export const TeamPage: React.FC = () => {
   const { navigateToHome } = useNavigation();
 
   return (
-    <div className="min-h-screen bg-[#01040E] text-[#F8FAFC] pt-24 pb-12">
+    <div className="min-h-screen bg-[#01040E] text-[#F8FAFC] pt-16 sm:pt-20 pb-8">
       {/* Top Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <div className="flex items-center justify-between py-3 border-b border-[#F5B81C]/20 text-xs font-cinzel">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-2 sm:mb-3">
+        <div className="flex items-center justify-between py-2 border-b border-[#F5B81C]/20 text-xs font-cinzel">
           <div className="flex items-center gap-2 text-[#94A3B8]">
             <button onClick={navigateToHome} className="hover:text-[#F5B81C] transition-colors uppercase tracking-wider cursor-pointer">
               HOME

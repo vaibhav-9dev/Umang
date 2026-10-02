@@ -72,13 +72,13 @@ export const AboutPage: React.FC = () => {
             </h1>
 
             <p className="font-cinzel text-sm sm:text-lg font-bold uppercase tracking-[0.24em] text-[#FFC72C] mb-8">
-              WHERE LEGENDS RISE AND OLYMPUS AWAKENS
+              WHERE CHAMPIONS COMPETE AND LEGENDS RISE
             </p>
 
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/50 mx-auto mb-8" />
 
             <p className="font-sans text-base sm:text-lg text-[#F8FAFC]/90 leading-relaxed font-light mb-6">
-              Umang 2026 brings together students and athletes for a celebration of sport, competition and community. Inspired by the legendary arenas of Olympus, this year&apos;s edition invites every competitor to step forward and create their own legend.
+              Umang 2026 brings together students and athletes for a celebration of sport, competition and community. This year&apos;s edition invites every competitor to step forward and create their own legend.
             </p>
 
             <p className="font-sans text-sm sm:text-base text-[#94A3B8] leading-relaxed font-light">
@@ -177,10 +177,10 @@ export const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-6">
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C] block mb-2">
-              THE OLYMPIAN RITUAL
+              CAMPUS & ARENAS
             </span>
             <h3 className="font-cinzel text-2xl sm:text-4xl font-extrabold uppercase tracking-[0.14em] text-[#F8FAFC] mb-6">
-              THE SACRED GROUNDS OF IIIT BANGALORE
+              THE GROUNDS OF IIIT BANGALORE
             </h3>
 
             <p className="font-sans text-xs sm:text-sm text-[#94A3B8] leading-relaxed font-light mb-4">
@@ -213,7 +213,7 @@ export const AboutPage: React.FC = () => {
           <div className="flex items-center gap-2 mb-2">
             <ShieldCheck className="w-5 h-5 text-[#F5B81C]" />
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C]">
-              TOURNAMENT CODE OF OLYMPUS
+              TOURNAMENT CODE OF CONDUCT
             </span>
           </div>
 

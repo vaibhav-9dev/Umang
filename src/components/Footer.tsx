@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="font-cinzel text-xs font-bold uppercase tracking-[0.24em] text-[#FFC72C] mb-2">
-              OLYMPOUS REBORN
+              OLYMPUS REBORN
             </p>
 
             <p className="font-sans text-xs text-[#94A3B8] leading-relaxed mb-4">
@@ -286,7 +286,7 @@ export const Footer: React.FC = () => {
 
           <div className="flex items-center gap-2 text-xs font-cinzel tracking-wider text-[#F5B81C]">
             <GreekColumnIcon className="w-3 h-5 text-[#F5B81C]" />
-            <span>IIIT BANGALORE · OLYMPOUS REBORN</span>
+            <span>IIIT BANGALORE · OLYMPUS REBORN</span>
           </div>
         </div>
 

@@ -100,30 +100,18 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
           <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C] z-10" />
 
           <div className="relative z-10 p-8 sm:p-12 lg:p-16 max-w-4xl">
-            {/* Deity and Order Tag */}
+            {/* Order Tag */}
             <div className="inline-flex items-center gap-3 px-3 py-1 border border-[#F5B81C]/35 bg-[#01040E]/90 backdrop-blur-sm mb-4">
               <UmangLogo size="xs" withRing className="w-4 h-4" />
               <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#FFC72C]">
-                ARENA {sport.orderNumber} · {sport.greekDeity}
+                ARENA {sport.orderNumber}
               </span>
             </div>
 
             {/* Sport Name */}
-            <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight mb-2">
+            <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-[0.14em] text-[#F8FAFC] leading-tight mb-6">
               {sport.name}
             </h1>
-
-            {/* Mythological Subtitle */}
-            <p className="font-cinzel text-base sm:text-xl font-bold uppercase tracking-[0.24em] text-[#FFC72C] mb-6">
-              {sport.subtitle}
-            </p>
-
-            {/* Mythos Quote */}
-            <div className="p-4 bg-[#01040E]/90 border-l-2 border-[#F5B81C] mb-6 max-w-2xl">
-              <p className="font-sans text-xs sm:text-sm text-[#94A3B8] italic leading-relaxed">
-                &ldquo;{sport.mythosQuote}&rdquo;
-              </p>
-            </div>
 
             {/* Overview narrative */}
             <p className="font-sans text-sm sm:text-base text-[#F8FAFC]/90 leading-relaxed font-light max-w-3xl mb-8">
@@ -252,7 +240,7 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
           <div className="flex items-center gap-2 mb-2">
             <Scroll className="w-4 h-4 text-[#F5B81C]" />
             <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C]">
-              TOURNAMENT CODE OF OLYMPUS
+              TOURNAMENT CODE OF CONDUCT
             </span>
           </div>
 

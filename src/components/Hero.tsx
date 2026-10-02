@@ -59,19 +59,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
 
         {/* Monumental Theme Heading */}
         <h1 className="font-cinzel text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.12em] uppercase leading-[0.95] text-gold-gradient drop-shadow-2xl my-2">
-          OLYMPOUS
+          OLYMPUS
           <span className="block text-[#F8FAFC] font-black tracking-[0.14em] text-4xl sm:text-6xl md:text-7xl lg:text-8xl mt-1">
             REBORN
           </span>
         </h1>
 
-        {/* Tagline */}
-        <p className="font-cinzel text-base sm:text-xl md:text-2xl font-bold tracking-[0.24em] text-[#FFC72C] uppercase mt-4 mb-2 max-w-2xl">
-          THE GAMES RETURN. THE GODS AWAKEN.
-        </p>
-
         {/* Canonical Sports from the Official Logo Emblem */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-3">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-4">
           {['VOLLEYBALL', 'FOOTBALL', 'BADMINTON', 'BASKETBALL'].map((sport) => (
             <span
               key={sport}
@@ -89,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
 
         {/* Description & Supporting Text */}
         <p className="font-sans text-sm sm:text-base md:text-lg text-[#94A3B8] max-w-2xl mx-auto font-light leading-relaxed mt-2 mb-8">
-          A celebration of collegiate athleticism, unyielding honor, and campus spirit across IIIT Bangalore. Step onto the sacred fields and leave your mark in legend.
+          A celebration of collegiate athleticism, unyielding honor, and campus spirit across IIIT Bangalore. Step onto the courts and fields and showcase your sporting excellence.
         </p>
 
         {/* Action Buttons */}

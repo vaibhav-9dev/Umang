@@ -28,7 +28,7 @@ export const SportCard: React.FC<SportCardProps> = ({
   return (
     <div className={`group relative bg-[#03091F] border ${
       isEmblemSport ? 'border-[#F5B81C]/50 shadow-[0_0_25px_rgba(11,29,84,0.4)]' : 'border-[#F5B81C]/25'
-    } hover:border-[#F5B81C]/80 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl hover:shadow-[0_0_35px_rgba(245,184,28,0.25),0_0_50px_rgba(11,29,84,0.5)]`}>
+    } hover:border-[#F5B81C]/80 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl hover:shadow-[0_0_35px_rgba(245,184,28,0.25),0_0_50px_rgba(11,29,84,0.5)] min-h-[390px] sm:min-h-[430px]`}>
       {/* Classical Corner Notches in Gold */}
       <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#F5B81C]/70 group-hover:border-[#F5B81C] transition-colors z-10" />
       <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#F5B81C]/70 group-hover:border-[#F5B81C] transition-colors z-10" />
@@ -36,14 +36,14 @@ export const SportCard: React.FC<SportCardProps> = ({
       <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#F5B81C]/70 group-hover:border-[#F5B81C] transition-colors z-10" />
 
       {/* Clearly visible background sport arena/action image */}
-      <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-65 transition-opacity pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-45 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none">
         <img
           src={sport.heroImage}
           alt={sport.name}
-          className="w-full h-full object-cover filter brightness-105 contrast-120 saturate-110 group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover object-center filter brightness-110 contrast-125 saturate-110 group-hover:scale-105 transition-transform duration-700"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#01040E] via-[#03091F]/70 to-[#01040E]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#01040E] via-[#01040E]/40 to-[#01040E]/20" />
       </div>
 
       {/* Royal Olympian Blue Gradient & Sapphire Radial Accent */}
@@ -67,29 +67,19 @@ export const SportCard: React.FC<SportCardProps> = ({
           {isEmblemSport ? (
             <span className="inline-flex items-center gap-1 font-cinzel text-[10px] uppercase tracking-wider text-[#FFC72C] bg-[#0E2866]/80 px-2 py-0.5 border border-[#F5B81C]/40">
               <ShieldCheck className="w-3 h-3 text-[#F5B81C]" />
-              LOGO EMBLEM ARENA
+              FEATURED
             </span>
           ) : (
             <span className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#F5B81C]/80">
-              {sport.greekDeity.split('Domain of ')[1] || 'Olympus'}
+              UMANG 2026
             </span>
           )}
         </div>
 
         {/* Sport Name */}
-        <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8F9FA] group-hover:text-gold-light-gradient transition-all">
+        <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8F9FA] group-hover:text-gold-light-gradient transition-all mb-6">
           {sport.name}
         </h3>
-
-        {/* Mythology Subtitle */}
-        <p className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#FFC72C] mt-1 mb-3">
-          {sport.subtitle}
-        </p>
-
-        {/* Mythos Quote */}
-        <p className="font-sans text-xs text-[#A0ABC4] italic leading-relaxed mb-6 font-light">
-          &ldquo;{sport.mythosQuote}&rdquo;
-        </p>
 
         {/* Events Preview Pills */}
         <div className="mt-auto pt-4 border-t border-white/10">

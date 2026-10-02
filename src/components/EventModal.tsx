@@ -63,10 +63,6 @@ export const EventModal: React.FC<EventModalProps> = ({
               <span className="font-cinzel text-xs font-semibold text-[#F5B81C] tracking-[0.2em] uppercase">
                 ARENA {sport.orderNumber}
               </span>
-              <span className="text-[#94A3B8]/40">·</span>
-              <span className="font-cinzel text-xs text-[#94A3B8] tracking-widest uppercase">
-                {sport.greekDeity}
-              </span>
             </div>
 
             <h3
@@ -75,10 +71,6 @@ export const EventModal: React.FC<EventModalProps> = ({
             >
               {sport.name}
             </h3>
-
-            <p className="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#FFC72C] mt-0.5">
-              {sport.subtitle}
-            </p>
           </div>
 
           <button
@@ -92,13 +84,7 @@ export const EventModal: React.FC<EventModalProps> = ({
 
         {/* Modal Body: Scrollable Events Area */}
         <div className="overflow-y-auto py-6 pr-1 space-y-4">
-          <div className="p-3 bg-[#01040E]/80 border border-[#F5B81C]/20 mb-2">
-            <p className="font-sans text-xs text-[#94A3B8] italic leading-relaxed">
-              &ldquo;{sport.mythosQuote}&rdquo;
-            </p>
-          </div>
-
-          <div className="flex items-center justify-between pt-2 pb-1">
+          <div className="flex items-center justify-between pt-1 pb-1">
             <span className="font-cinzel text-xs uppercase tracking-[0.2em] text-[#F8FAFC]/80">
               AVAILABLE EVENTS ({sport.events.length})
             </span>

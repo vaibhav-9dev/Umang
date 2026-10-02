@@ -172,9 +172,6 @@ export const ContactSection: React.FC = () => {
                     <p className="font-sans text-xs font-semibold text-[#F5B81C] uppercase tracking-wider mt-0.5">
                       {person.role}
                     </p>
-                    <p className="font-sans text-[11px] text-[#94A3B8] mt-0.5">
-                      {person.department}
-                    </p>
                   </div>
                 </div>
 

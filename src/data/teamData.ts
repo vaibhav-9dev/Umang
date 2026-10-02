@@ -10,7 +10,11 @@
 import srikarImg from '../assets/images/SrikarImg.jpeg';
 import abhiImg from '../assets/images/AbhiRam.jpeg';
 import ajayImg from '../assets/images/Ajay.jpeg';
+import yashrajImg from '../assets/images/YashRaj.jpeg';
 import anshImg from '../assets/images/Ansh.png';
+import pratikImg from '../assets/images/Pratik.jpeg';
+import utkarshImg from '../assets/images/Utkarsh.jpeg';
+import varunImg from '../assets/images/coord_varun_portrait_1790531424265.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
 import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
@@ -75,10 +79,10 @@ export const SPORTS_COMMITTEE: TeamMember[] = [
     department: "IC2025032",
     phone: "+91 93739 77020",
     phoneRaw: "+919373977020",
-    photoUrl: ajayImg,
+    photoUrl: yashrajImg,
     linkedin: "https://www.linkedin.com/in/yashraj-mahalle-8541b7383/",
     instagram: "https://www.instagram.com/",
-    email: "Ajay.Mahalle@iiitb.ac.in",
+    email: "yashraj.mahalle@iiitb.ac.in",
     teamCategory: 'sports_comm'
   },
   {
@@ -94,6 +98,34 @@ export const SPORTS_COMMITTEE: TeamMember[] = [
     instagram: "https://www.instagram.com/",
     email: "pisupati.srikar@iiitb.ac.in",
     teamCategory: 'sports_comm'
+  },
+  {
+    id: "sports-5",
+    name: "Pratik Patil",
+    role: "Sports Comm Member",
+    mythologicalTitle: "Sports Comm Member",
+    department: "IC2025023",
+    phone: "+91 89564 89981",
+    phoneRaw: "+918956489981",
+    photoUrl: pratikImg,
+    linkedin: "https://www.linkedin.com/in/",
+    instagram: "https://www.instagram.com/",
+    email: "Gokul.Patil@iiitb.ac.in",
+    teamCategory: 'sports_comm'
+  },
+  {
+    id: "sports-6",
+    name: "Utkarsh Gupta",
+    role: "Sports Comm Member",
+    mythologicalTitle: "Sports Comm Member",
+    department: "IMT2024042",
+    phone: "+91 93115 09800",
+    phoneRaw: "+919311509800",
+    photoUrl: utkarshImg,
+    linkedin: "https://www.linkedin.com/in/",
+    instagram: "https://www.instagram.com/",
+    email: "Utkarsh.G@iiitb.ac.in",
+    teamCategory: 'sports_comm'
   }
 ];
 
@@ -103,7 +135,7 @@ export const WEBSITE_TEAM: TeamMember[] = [
     id: "web-1",
     name: "Aditya Verma",
     role: "Lead Web Architect & Developer",
-    mythologicalTitle: "Daedalus of the Web",
+    mythologicalTitle: "Lead Web Architect",
     department: "iM.Tech CSE · IIIT Bangalore",
     phone: "+91 98860 12450",
     phoneRaw: "+919886012450",
@@ -117,7 +149,7 @@ export const WEBSITE_TEAM: TeamMember[] = [
     id: "web-2",
     name: "Nikhil Rao",
     role: "Frontend & Interactions Engineer",
-    mythologicalTitle: "Hephaestus' Artisan",
+    mythologicalTitle: "Frontend Engineer",
     department: "M.Tech CSE · IIIT Bangalore",
     phone: "+91 97425 33819",
     phoneRaw: "+919742533819",
@@ -131,7 +163,7 @@ export const WEBSITE_TEAM: TeamMember[] = [
     id: "web-3",
     name: "Arjun Sharma",
     role: "Systems & Cloud Infrastructure",
-    mythologicalTitle: "Titan of the Cloud",
+    mythologicalTitle: "Systems & Cloud",
     department: "M.Tech CSE · IIIT Bangalore",
     phone: "+91 98450 18234",
     phoneRaw: "+919845018234",
@@ -149,7 +181,7 @@ export const DESIGN_TEAM: TeamMember[] = [
     id: "design-1",
     name: "Meera Krishnan",
     role: "Creative Director & UI/UX Lead",
-    mythologicalTitle: "Muse of Aesthetics",
+    mythologicalTitle: "Creative Director",
     department: "M.Sc Digital Society · IIIT Bangalore",
     phone: "+91 95350 44218",
     phoneRaw: "+919535044218",
@@ -163,7 +195,7 @@ export const DESIGN_TEAM: TeamMember[] = [
     id: "design-2",
     name: "Sneha Sen",
     role: "Visual Branding & Graphic Designer",
-    mythologicalTitle: "Weaver of Olympus",
+    mythologicalTitle: "Visual Branding",
     department: "iM.Tech · IIIT Bangalore",
     phone: "+91 91130 67584",
     phoneRaw: "+919113067584",
@@ -177,7 +209,7 @@ export const DESIGN_TEAM: TeamMember[] = [
     id: "design-3",
     name: "Tanmay Bhat",
     role: "Motion Graphics & Social Assets",
-    mythologicalTitle: "Illuminator of the Agora",
+    mythologicalTitle: "Motion Graphics",
     department: "iM.Tech · IIIT Bangalore",
     phone: "+91 99801 88342",
     phoneRaw: "+919980188342",
@@ -194,7 +226,7 @@ export const ALL_TEAM_GROUPS = [
   {
     id: 'sports_comm' as TeamCategory,
     name: 'SPORTS COMMITTEE',
-    subTitle: 'The Council of Olympus',
+    subTitle: 'Sports Committee Convenors',
     badge: 'CORE CONVENORS & SPORTS COMM',
     description: 'The student leaders and sports committee coordinators orchestrating sports tournaments, tournament schedules, athlete logistics, and pitch operations.',
     members: SPORTS_COMMITTEE
@@ -202,7 +234,7 @@ export const ALL_TEAM_GROUPS = [
   {
     id: 'website' as TeamCategory,
     name: 'WEBSITE & TECH TEAM',
-    subTitle: 'The Digital Artisans',
+    subTitle: 'Web & Systems Engineering',
     badge: 'PORTAL ENGINEERING & SYSTEMS',
     description: 'The engineering minds behind the official UMANG 2026 digital portal, real-time registration conduits, and performance architecture.',
     members: WEBSITE_TEAM
@@ -210,9 +242,9 @@ export const ALL_TEAM_GROUPS = [
   {
     id: 'design' as TeamCategory,
     name: 'CREATIVE & DESIGN TEAM',
-    subTitle: 'The Muses of Olympus',
+    subTitle: 'Visual & UI/UX Design',
     badge: 'VISUAL IDENTITY & UI/UX',
-    description: 'The visionary designers shaping the aesthetic legacy of UMANG 2026 — from Greek mythological visual lore and UI/UX design to tournament branding.',
+    description: 'The visionary designers shaping the aesthetic presentation of UMANG 2026 — from UI/UX design to tournament branding and digital assets.',
     members: DESIGN_TEAM
   }
 ];

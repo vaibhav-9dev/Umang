@@ -71,9 +71,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "basketball",
     orderNumber: "I",
     name: "Basketball",
-    subtitle: "THE ARENA OF CHAMPIONS",
-    greekDeity: "Domain of Nike & Ares",
-    mythosQuote: "Ascend the heights of Olympus. Rise above the rim where mortals become legends.",
+    subtitle: "INTER-COLLEGIATE BASKETBALL",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "The hardwood arena beckons the bold. Combining explosive verticality, court vision, and relentless fast breaks, the basketball tournament at Umang 2026 tests the absolute limits of team chemistry and clutch shooting.",
     iconName: "Flame",
     heroImage: bbstatue,
@@ -146,9 +146,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "football",
     orderNumber: "II",
     name: "Football",
-    subtitle: "BATTLE BENEATH OLYMPUS",
-    greekDeity: "Domain of Hephaestus & Ares",
-    mythosQuote: "Forged in endurance. A contest of speed, tactical unity, and unyielding will.",
+    subtitle: "6V6 SHORT PITCH FOOTBALL",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Under the stadium lights of IIIT Bangalore, teams collide in a high-octane 6v6 tournament. Space is tight, pace is relentless, and every through ball carries the weight of victory.",
     iconName: "Shield",
     heroImage: ff,
@@ -205,9 +205,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "table-tennis",
     orderNumber: "III",
     name: "Table Tennis",
-    subtitle: "PRECISION OF THE GODS",
-    greekDeity: "Domain of Apollo",
-    mythosQuote: "Split-second instinct and divine precision. When the orb flies, destiny is decided.",
+    subtitle: "FAST-PACED TABLE TENNIS",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Lightning reflexes, deceitful spin, and unwavering composure. Table tennis at Umang 2026 spans across individual singles, doubles partnerships, mixed duels, and prestigious team championships.",
     iconName: "Zap",
     heroImage: tt,
@@ -275,7 +275,7 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "tt-1",
         imageUrl: ttplay,
-        title: "The Service of Apollo",
+        title: "Match Point Service",
         caption: "Razor-sharp spin generation during high-stakes championship play."
       },
       {
@@ -296,9 +296,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "badminton",
     orderNumber: "IV",
     name: "Badminton",
-    subtitle: "WINGS OF VICTORY",
-    greekDeity: "Domain of Hermes",
-    mythosQuote: "Swift as feathered sandals across Mount Olympus. Agility reigns supreme.",
+    subtitle: "SHUTTLE CHAMPIONSHIP",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Soaring overhead smashes and feather-light net drops. The badminton arena brings explosive footwork and tactical racquet craft together across singles, doubles, and team encounters.",
     iconName: "Feather",
     heroImage: badminton,
@@ -364,7 +364,7 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "bad-2",
         imageUrl: btarena,
-        title: "The Court of Hermes",
+        title: "Badminton Arena",
         caption: "Synthetic indoor courts prepared for non-stop racquet battles."
       },
       {
@@ -379,9 +379,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "volleyball",
     orderNumber: "V",
     name: "Volleyball",
-    subtitle: "POWER OF OLYMPUS",
-    greekDeity: "Domain of Zeus",
-    mythosQuote: "Commanding the air with thunderous strikes. Defend your citadel.",
+    subtitle: "SPIKE & SERVE TOURNAMENT",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Above the net, power meets timing. The men's volleyball championship pits powerhouse collegiate teams in thunderous spikes, three-man blocks, and miraculous floor digs.",
     iconName: "Activity",
     heroImage: volleyball,
@@ -438,9 +438,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "tennis",
     orderNumber: "VI",
     name: "Tennis",
-    subtitle: "THE DUEL",
-    greekDeity: "Domain of Artemis",
-    mythosQuote: "An unyielding duel of endurance, court mastery, and relentless focus.",
+    subtitle: "SINGLES & DOUBLES TOURNAMENT",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Pounding baselines and crisp volleys. The men's team tennis tournament challenges players across both hard-hitting singles ties and tactical doubles combinations.",
     iconName: "Crosshair",
     heroImage: tennis,
@@ -482,7 +482,7 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "tn-2",
         imageUrl: tenarena,
-        title: "Hard Courts of Olympus",
+        title: "Hard Court Championship",
         caption: "The premier outdoor hard court arena of IIIT Bangalore."
       },
       {
@@ -497,10 +497,10 @@ export const SPORTS_DATA: Sport[] = [
     id: "kabaddi",
     orderNumber: "VII",
     name: "Kabaddi",
-    subtitle: "STRENGTH OF TITANS",
-    greekDeity: "Domain of the Titans & Heracles",
-    mythosQuote: "Pure strength, fearless raids, and unbreakable brotherhood in the circle of sand.",
-    overview: "Rooted in raw strength, tactical breath control, and ironclad chain tackles. The Kabaddi arena tests who can hold the raid and who can hold the line when the Titans clash.",
+    subtitle: "POWER & TACTICS ON THE MAT",
+    greekDeity: "",
+    mythosQuote: "",
+    overview: "Rooted in raw strength, tactical breath control, and ironclad chain tackles. The Kabaddi arena tests who can hold the raid and who can hold the line when top teams clash.",
     iconName: "Trophy",
     heroImage: kabaddi,
     events: [
@@ -535,7 +535,7 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "kb-1",
         imageUrl: kplay,
-        title: "Circle of Titans",
+        title: "Circle of Champions",
         caption: "The sacred mat where brotherhood and sheer physical will are tested."
       },
       {
@@ -556,9 +556,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "throwball",
     orderNumber: "VIII",
     name: "Throwball",
-    subtitle: "GRACE & POWER",
-    greekDeity: "Domain of Hera & Artemis",
-    mythosQuote: "Poise beneath pressure, explosive agility, and seamless team coordination.",
+    subtitle: "POWER & TEAM AGILITY",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Rapid catches, bullet releases, and spatial dominance. The women's throwball championship highlights precision ball placement and synchronized defensive coverage.",
     iconName: "Target",
     heroImage: throwball,
@@ -600,7 +600,7 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "tb-2",
         imageUrl: tharena,
-        title: "The Court of Hera",
+        title: "Throwball Arena",
         caption: "Lined court ready for energetic team throwball fixtures."
       },
       {
@@ -615,9 +615,9 @@ export const SPORTS_DATA: Sport[] = [
     id: "chess",
     orderNumber: "IX",
     name: "Chess",
-    subtitle: "THE BATTLE OF MINDS",
-    greekDeity: "Domain of Athena",
-    mythosQuote: "The grand arena of intellect. Every move echoes across the immortal pantheon.",
+    subtitle: "RAPID CHESS CHAMPIONSHIP",
+    greekDeity: "",
+    mythosQuote: "",
     overview: "Quiet intensity and deep strategic depth. The team chess championship demands visionary opening preparation, tactical calculations, and unshakeable psychological resilience.",
     iconName: "Crown",
     heroImage: chess,
@@ -653,8 +653,8 @@ export const SPORTS_DATA: Sport[] = [
       {
         id: "ch-1",
         imageUrl: chplay,
-        title: "The Council of Athena",
-        caption: "Intellect and strategy clashing across 64 squares of marble."
+        title: "Master Strategy Duel",
+        caption: "Intellect and strategy clashing across 64 squares."
       },
       {
         id: "ch-2",
