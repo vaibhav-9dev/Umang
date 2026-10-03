@@ -126,7 +126,7 @@ export const CONTACT_CONFIG = {
   coordinators: [
     {
       id: "coord-1",
-      name: "Abhiram M",
+      name: "Abhiram Mopuri",
       role: "Sports Comm Member",
       department: "IMT2023108",
       phone: "+91 98497 54039",
