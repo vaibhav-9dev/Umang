@@ -9,8 +9,7 @@ import {
   ExternalLink, 
   Copy, 
   Check, 
-  MessageCircle,
-  Trophy
+  MessageCircle 
 } from 'lucide-react';
 import { CONTACT_CONFIG } from '../data/contactData';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider } from './GreekDecorations';
@@ -63,120 +62,220 @@ export const ContactSection: React.FC = () => {
             CONTACT & DIRECTIONS
           </h2>
 
-          <p className="font-cinzel text-xs sm:text-sm font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-1.5">
-            STUDENT COORDINATORS · SATELLITE RADAR · CAMPUSES
-          </p>
-
           <div className="mt-3.5 flex items-center justify-center">
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
           </div>
         </div>
 
         {/* ============================================================ */}
-        {/* SPORTS DIRECTOR & FACULTY LEADERSHIP */}
+        {/* 1. GOOGLE MAPS SATELLITE VIEW & VENUE DIRECTIONS (TOP)       */}
         {/* ============================================================ */}
-        <div className="mb-14">
+        <div className="mb-16 sm:mb-20">
           <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-[#F5B81C]/20">
             <div className="flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-[#F5B81C]" />
+              <MapPin className="w-5 h-5 text-[#F5B81C]" />
               <h3 className="font-cinzel text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-[#F8FAFC]">
-                SPORTS DIRECTOR & FACULTY LEAD
+                VENUE LOCATION & CAMPUS DIRECTIONS
               </h3>
             </div>
             <span className="font-sans text-xs text-[#FFC72C] hidden sm:block">
-              IIIT Bangalore Physical Education & Sports
+              Electronics City Phase 1 · Bengaluru 560100
             </span>
           </div>
 
-          <div className="bg-[#03091F]/95 border-2 border-[#F5B81C]/40 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-            {/* Greek corner accents */}
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#F5B81C]" />
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#F5B81C]" />
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#F5B81C]" />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C]" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            
+            {/* Left Column (7 cols): Google Maps Satellite View Embed */}
+            <div className="lg:col-span-7 flex flex-col gap-4">
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
-              {/* Photo */}
-              <div className="md:col-span-4 lg:col-span-3 flex justify-center">
-                <div className="relative aspect-square w-48 sm:w-56 overflow-hidden bg-[#01040E] border-2 border-[#F5B81C]/40 shadow-xl group">
-                  <img
-                    src={CONTACT_CONFIG.sportsDirector.photoUrl}
-                    alt={CONTACT_CONFIG.sportsDirector.name}
-                    className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-500"
+              {/* Map Frame */}
+              <div className="relative bg-[#03091F]/90 border border-[#F5B81C]/30 p-2 sm:p-3 shadow-2xl flex-1 flex flex-col">
+                
+                {/* Map Title Header Bar */}
+                <div className="flex items-center justify-between px-3 py-2 bg-[#01040E] border border-[#F5B81C]/15 mb-2">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#F5B81C]" />
+                    <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">
+                      SATELLITE ORBIT · IIIT BANGALORE
+                    </span>
+                  </div>
+                  <span className="font-sans text-[11px] text-[#FFC72C]">
+                    {activeCampus.area}
+                  </span>
+                </div>
+
+                {/* Embedded Satellite View Map Iframe */}
+                <div className="relative w-full h-[340px] sm:h-[400px] overflow-hidden bg-[#01040E] border border-white/10">
+                  <iframe
+                    key={activeCampus.id}
+                    title={`${activeCampus.name} Satellite View Map`}
+                    src={activeCampus.map.embedSatelliteUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, filter: 'contrast(1.08) saturate(1.1)' }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
                   />
-                  <div className="absolute top-2 right-2 bg-[#01040E]/90 px-2.5 py-1 border border-[#F5B81C]/40">
-                    <span className="font-cinzel text-[10px] uppercase tracking-widest text-[#FFC72C] font-bold">
-                      DIRECTOR
+
+                  {/* Satellite Badge Overlay */}
+                  <div className="absolute top-3 left-3 bg-[#01040E]/90 backdrop-blur-md px-3 py-1 border border-[#F5B81C]/30 flex items-center gap-2 pointer-events-none">
+                    <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="font-cinzel text-[10px] tracking-wider uppercase text-[#FFC72C]">
+                      LIVE SATELLITE · IIIT BANGALORE
                     </span>
                   </div>
                 </div>
-              </div>
 
-              {/* Info & Credentials */}
-              <div className="md:col-span-8 lg:col-span-9 flex flex-col justify-between">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F5B81C]/15 border border-[#F5B81C]/40 text-[#FFC72C] font-cinzel text-xs font-bold uppercase tracking-widest mb-2">
-                    <LaurelWreath className="w-3.5 h-3.5 text-[#F5B81C]" />
-                    <span>SPORTS OFFICER & DIRECTOR</span>
+                {/* Action Bar beneath Map */}
+                <div className="mt-3 p-3 bg-[#01040E] border border-[#F5B81C]/15 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  <div className="text-left">
+                    <p className="font-sans text-xs text-[#F8FAFC] font-medium">
+                      {activeCampus.street}
+                    </p>
+                    <p className="font-sans text-[11px] text-[#94A3B8]">
+                      {activeCampus.landmark} · Pincode: {activeCampus.pincode}
+                    </p>
                   </div>
 
-                  <h4 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.12em] text-[#F8FAFC]">
-                    {CONTACT_CONFIG.sportsDirector.name}
-                  </h4>
-
-                  <p className="font-sans text-xs sm:text-sm text-[#FFC72C] font-semibold tracking-wider mt-1 mb-2">
-                    {CONTACT_CONFIG.sportsDirector.department} · {CONTACT_CONFIG.sportsDirector.institute}
-                  </p>
-
-                  <p className="font-sans text-xs text-[#94A3B8] leading-relaxed max-w-2xl mb-6">
-                    Directing collegiate athletic operations, arena governance, and tournament logistics across IIIT Bangalore for UMANG 2026.
-                  </p>
-                </div>
-
-                {/* Contact Action Bar */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
                   <a
-                    href={`mailto:${CONTACT_CONFIG.sportsDirector.email}`}
-                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/30 text-xs font-sans text-[#F8FAFC] transition-all"
-                  >
-                    <Mail className="w-4 h-4 text-[#F5B81C]" />
-                    <div>
-                      <span className="text-[10px] text-[#94A3B8] block uppercase">Official Email</span>
-                      <span className="font-medium truncate block max-w-[170px]">{CONTACT_CONFIG.sportsDirector.email}</span>
-                    </div>
-                  </a>
-
-                  <a
-                    href={`tel:${CONTACT_CONFIG.sportsDirector.phoneRaw}`}
-                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/30 text-xs font-sans text-[#F8FAFC] transition-all"
-                  >
-                    <Phone className="w-4 h-4 text-[#F5B81C]" />
-                    <div>
-                      <span className="text-[10px] text-[#94A3B8] block uppercase">Institute Phone</span>
-                      <span className="font-medium">{CONTACT_CONFIG.sportsDirector.phone}</span>
-                    </div>
-                  </a>
-
-                  <a
-                    href={CONTACT_CONFIG.sportsDirector.linkedin}
+                    href={activeCampus.map.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#0077B5] border border-[#0077B5]/40 text-xs font-sans text-[#F8FAFC] transition-all"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2 font-cinzel text-xs font-bold uppercase tracking-wider text-[#01040E] bg-gradient-to-r from-[#FFC72C] to-[#F5B81C] hover:brightness-110 transition-all shrink-0 font-semibold"
                   >
-                    <Linkedin className="w-4 h-4 text-[#0077B5]" />
-                    <div>
-                      <span className="text-[10px] text-[#94A3B8] block uppercase">Professional Network</span>
-                      <span className="font-medium">LinkedIn Profile</span>
-                    </div>
+                    <Navigation className="w-3.5 h-3.5" />
+                    <span>GET DIRECTIONS TO CAMPUS</span>
+                    <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
               </div>
+
+              {/* E-City Campus Detail Card */}
+              <div className="p-4 bg-[#03091F]/90 border border-[#F5B81C]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg">
+                <div>
+                  <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#FFC72C] flex items-center gap-1.5 mb-1">
+                    <MapPin className="w-3.5 h-3.5 text-[#F5B81C]" />
+                    VENUE ADDRESS & LANDMARK
+                  </span>
+                  <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                    26/C, Opposite Infosys Gate 1, Electronic City Phase 1, Hosur Road, Bengaluru 560100
+                  </p>
+                  <p className="text-[11px] text-[#94A3B8] italic mt-0.5">
+                    Adjacent to Namma Metro Yellow Line (Electronic City Station) & Elevated Expressway
+                  </p>
+                </div>
+
+                <a
+                  href={activeCampus.map.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/40 text-xs font-cinzel uppercase font-bold text-[#FFC72C] transition-all shrink-0 cursor-pointer"
+                >
+                  <span>OPEN GOOGLE MAPS</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+
             </div>
+
+            {/* Right Column (5 cols): Umang Instagram & Contact Cards */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              
+              {/* Highlighted Card: College Umang Instagram Page with Official Logo */}
+              <div className="relative bg-gradient-to-br from-[#03091F] via-[#051233] to-[#01040E] border border-[#F5B81C]/40 p-6 shadow-2xl">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <UmangLogo size="sm" withGlow withRing />
+                    <div>
+                      <h3 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#F8FAFC]">
+                        COLLEGE UMANG INSTAGRAM
+                      </h3>
+                      <span className="font-sans text-xs text-[#FFC72C]">
+                        {CONTACT_CONFIG.socialMedia.instagramHandle}
+                      </span>
+                    </div>
+                  </div>
+                  <LaurelWreath className="w-6 h-6 text-[#F5B81C]" />
+                </div>
+
+                <p className="font-sans text-xs text-[#94A3B8] leading-relaxed mb-5">
+                  Catch behind-the-scenes arena preparations, fixture announcements, real-time match results, and athlete spotlights from IIIT Bangalore.
+                </p>
+
+                <a
+                  href={CONTACT_CONFIG.socialMedia.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2.5 py-3 font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#01040E] bg-gradient-to-r from-[#FFC72C] via-[#F5B81C] to-[#E6AA12] hover:brightness-110 active:scale-[0.98] transition-all shadow-md font-semibold"
+                >
+                  <Instagram className="w-4 h-4 text-[#01040E]" />
+                  <span>FOLLOW @UMANG_IIITB</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-[#01040E]" />
+                </a>
+              </div>
+
+              {/* Inquiries & Direct Email Card */}
+              <div className="bg-[#03091F] border border-[#F5B81C]/20 p-6 space-y-4">
+                <div className="flex items-center gap-2 pb-2 border-b border-white/10">
+                  <Mail className="w-4 h-4 text-[#F5B81C]" />
+                  <h4 className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">
+                    OFFICIAL INQUIRIES & HELPDESK
+                  </h4>
+                </div>
+
+                <div className="space-y-3 text-xs">
+                  <div>
+                    <span className="text-[#94A3B8] block mb-0.5">Festival & Sports Queries:</span>
+                    <a
+                      href={`mailto:${CONTACT_CONFIG.contacts.sportsEmail}`}
+                      className="font-sans text-sm text-[#F8FAFC] hover:text-[#F5B81C] transition-colors font-medium flex items-center gap-1.5"
+                    >
+                      <span>{CONTACT_CONFIG.contacts.sportsEmail}</span>
+                      <ExternalLink className="w-3 h-3 text-[#94A3B8]" />
+                    </a>
+                  </div>
+
+                  <div>
+                    <span className="text-[#94A3B8] block mb-0.5">Sports Committee Desk:</span>
+                    <a
+                      href={`mailto:${CONTACT_CONFIG.contacts.generalEmail}`}
+                      className="font-sans text-sm text-[#F8FAFC] hover:text-[#F5B81C] transition-colors font-medium flex items-center gap-1.5"
+                    >
+                      <span>{CONTACT_CONFIG.contacts.generalEmail}</span>
+                      <ExternalLink className="w-3 h-3 text-[#94A3B8]" />
+                    </a>
+                  </div>
+
+                  <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-[#94A3B8]">
+                    <span>Institute Desk: {CONTACT_CONFIG.contacts.studentConvenorPhone}</span>
+                    <span className="text-[#F5B81C]">Bengaluru, India</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Transit Guidance */}
+              <div className="p-4 bg-[#03091F] border border-[#F5B81C]/25 flex items-start gap-3">
+                <GreekColumnIcon className="w-4 h-7 text-[#F5B81C] shrink-0 mt-0.5" />
+                <div className="text-xs text-[#94A3B8] leading-relaxed space-y-1.5">
+                  <strong className="text-[#F8FAFC] block font-cinzel text-[11px] uppercase tracking-wider">
+                    CAMPUS ENTRY & ACCESS GUIDE
+                  </strong>
+                  <div>
+                    <span className="text-[#FFC72C] font-semibold block">Electronic City Campus:</span>
+                    Located in Electronic City Phase 1, Opposite Infosys Gate 1. Accessible via Namma Metro Yellow Line (Infosys Foundation / Electronic City Station) and Elevated Expressway from Silk Board. All sports tournaments and festival arenas are hosted on campus grounds.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
         {/* ============================================================ */}
-        {/* 1. THREE STUDENT CONTACT COORDINATORS WITH HOVER SOCIALS & PHONES */}
+        {/* 2. STUDENT CONTACT COORDINATORS (LATER / BELOW)             */}
         {/* ============================================================ */}
         <div className="mb-12">
           <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-[#F5B81C]/20">
@@ -342,217 +441,6 @@ export const ContactSection: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* ============================================================ */}
-        {/* 2. GOOGLE MAPS SATELLITE VIEW & UMANG INSTAGRAM SHOWCASE */}
-        {/* ============================================================ */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          
-          {/* Left Column (7 cols): Google Maps Satellite View Embed */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
-            
-            {/* Campus Identification Header */}
-            <div className="bg-[#03091F]/90 border border-[#F5B81C]/30 p-3 sm:p-3.5 flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#FFC72C]" />
-                <div>
-                  <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-wider text-[#F8FAFC] block">
-                    IIIT BANGALORE · ELECTRONIC CITY CAMPUS
-                  </span>
-                  <span className="text-[11px] font-sans text-[#94A3B8]/90 block mt-0.5">
-                    Electronics City Phase 1 · Bengaluru, Karnataka 560100
-                  </span>
-                </div>
-              </div>
-              <span className="hidden sm:inline-block text-[10px] font-cinzel uppercase px-2.5 py-1 border border-[#F5B81C]/50 text-[#FFC72C] bg-[#F5B81C]/15 font-bold">
-                TOURNAMENT ARENAS
-              </span>
-            </div>
-
-            {/* Map Frame */}
-            <div className="relative bg-[#03091F]/90 border border-[#F5B81C]/30 p-2 sm:p-3 shadow-2xl flex-1 flex flex-col">
-              
-              {/* Map Title Header Bar */}
-              <div className="flex items-center justify-between px-3 py-2 bg-[#01040E] border border-[#F5B81C]/15 mb-2">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#F5B81C]" />
-                  <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">
-                    SATELLITE ORBIT · {activeCampus.shortName.toUpperCase()}
-                  </span>
-                </div>
-                <span className="font-sans text-[11px] text-[#FFC72C]">
-                  {activeCampus.area}
-                </span>
-              </div>
-
-              {/* Embedded Satellite View Map Iframe */}
-              <div className="relative w-full h-[340px] sm:h-[400px] overflow-hidden bg-[#01040E] border border-white/10">
-                <iframe
-                  key={activeCampus.id}
-                  title={`${activeCampus.name} Satellite View Map`}
-                  src={activeCampus.map.embedSatelliteUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, filter: 'contrast(1.08) saturate(1.1)' }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
-                />
-
-                {/* Satellite Badge Overlay */}
-                <div className="absolute top-3 left-3 bg-[#01040E]/90 backdrop-blur-md px-3 py-1 border border-[#F5B81C]/30 flex items-center gap-2 pointer-events-none">
-                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-cinzel text-[10px] tracking-wider uppercase text-[#FFC72C]">
-                    LIVE SATELLITE · {activeCampus.shortName}
-                  </span>
-                </div>
-              </div>
-
-              {/* Action Bar beneath Map */}
-              <div className="mt-3 p-3 bg-[#01040E] border border-[#F5B81C]/15 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div className="text-left">
-                  <p className="font-sans text-xs text-[#F8FAFC] font-medium">
-                    {activeCampus.street}
-                  </p>
-                  <p className="font-sans text-[11px] text-[#94A3B8]">
-                    {activeCampus.landmark} · Pincode: {activeCampus.pincode}
-                  </p>
-                </div>
-
-                <a
-                  href={activeCampus.map.directionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2 font-cinzel text-xs font-bold uppercase tracking-wider text-[#01040E] bg-gradient-to-r from-[#FFC72C] to-[#F5B81C] hover:brightness-110 transition-all shrink-0 font-semibold"
-                >
-                  <Navigation className="w-3.5 h-3.5" />
-                  <span>GET DIRECTIONS TO CAMPUS</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
-
-            {/* E-City Campus Detail Card */}
-            <div className="p-4 bg-[#03091F]/90 border border-[#F5B81C]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg">
-              <div>
-                <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#FFC72C] flex items-center gap-1.5 mb-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#F5B81C]" />
-                  VENUE ADDRESS & LANDMARK
-                </span>
-                <p className="text-xs text-[#CBD5E1] leading-relaxed">
-                  26/C, Opposite Infosys Gate 1, Electronic City Phase 1, Hosur Road, Bengaluru 560100
-                </p>
-                <p className="text-[11px] text-[#94A3B8] italic mt-0.5">
-                  Adjacent to Namma Metro Yellow Line (Electronic City Station) & Elevated Expressway
-                </p>
-              </div>
-
-              <a
-                href={activeCampus.map.directionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/40 text-xs font-cinzel uppercase font-bold text-[#FFC72C] transition-all shrink-0 cursor-pointer"
-              >
-                <span>OPEN GOOGLE MAPS</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-
-          </div>
-
-          {/* Right Column (5 cols): Umang Instagram & Contact Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            
-            {/* Highlighted Card: College Umang Instagram Page with Official Logo */}
-            <div className="relative bg-gradient-to-br from-[#03091F] via-[#051233] to-[#01040E] border border-[#F5B81C]/40 p-6 shadow-2xl">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <UmangLogo size="sm" withGlow withRing />
-                  <div>
-                    <h3 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#F8FAFC]">
-                      COLLEGE UMANG INSTAGRAM
-                    </h3>
-                    <span className="font-sans text-xs text-[#FFC72C]">
-                      {CONTACT_CONFIG.socialMedia.instagramHandle}
-                    </span>
-                  </div>
-                </div>
-                <LaurelWreath className="w-6 h-6 text-[#F5B81C]" />
-              </div>
-
-              <p className="font-sans text-xs text-[#94A3B8] leading-relaxed mb-5">
-                Catch behind-the-scenes arena preparations, fixture announcements, real-time match results, and athlete spotlights from IIIT Bangalore.
-              </p>
-
-              <a
-                href={CONTACT_CONFIG.socialMedia.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2.5 py-3 font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#01040E] bg-gradient-to-r from-[#FFC72C] via-[#F5B81C] to-[#E6AA12] hover:brightness-110 active:scale-[0.98] transition-all shadow-md font-semibold"
-              >
-                <Instagram className="w-4 h-4 text-[#01040E]" />
-                <span>FOLLOW @UMANG_IIITB</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[#01040E]" />
-              </a>
-            </div>
-
-            {/* Inquiries & Direct Email Card */}
-            <div className="bg-[#03091F] border border-[#F5B81C]/20 p-6 space-y-4">
-              <div className="flex items-center gap-2 pb-2 border-b border-white/10">
-                <Mail className="w-4 h-4 text-[#F5B81C]" />
-                <h4 className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#F8FAFC]">
-                  OFFICIAL INQUIRIES & HELPDESK
-                </h4>
-              </div>
-
-              <div className="space-y-3 text-xs">
-                <div>
-                  <span className="text-[#94A3B8] block mb-0.5">Festival & Sports Queries:</span>
-                  <a
-                    href={`mailto:${CONTACT_CONFIG.contacts.sportsEmail}`}
-                    className="font-sans text-sm text-[#F8FAFC] hover:text-[#F5B81C] transition-colors font-medium flex items-center gap-1.5"
-                  >
-                    <span>{CONTACT_CONFIG.contacts.sportsEmail}</span>
-                    <ExternalLink className="w-3 h-3 text-[#94A3B8]" />
-                  </a>
-                </div>
-
-                <div>
-                  <span className="text-[#94A3B8] block mb-0.5">Sports Committee Desk:</span>
-                  <a
-                    href={`mailto:${CONTACT_CONFIG.contacts.generalEmail}`}
-                    className="font-sans text-sm text-[#F8FAFC] hover:text-[#F5B81C] transition-colors font-medium flex items-center gap-1.5"
-                  >
-                    <span>{CONTACT_CONFIG.contacts.generalEmail}</span>
-                    <ExternalLink className="w-3 h-3 text-[#94A3B8]" />
-                  </a>
-                </div>
-
-                <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[11px] text-[#94A3B8]">
-                  <span>Institute Desk: {CONTACT_CONFIG.contacts.studentConvenorPhone}</span>
-                  <span className="text-[#F5B81C]">Bengaluru, India</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Transit Guidance */}
-            <div className="p-4 bg-[#03091F] border border-[#F5B81C]/25 flex items-start gap-3">
-              <GreekColumnIcon className="w-4 h-7 text-[#F5B81C] shrink-0 mt-0.5" />
-              <div className="text-xs text-[#94A3B8] leading-relaxed space-y-1.5">
-                <strong className="text-[#F8FAFC] block font-cinzel text-[11px] uppercase tracking-wider">
-                  CAMPUS ENTRY & ACCESS GUIDE
-                </strong>
-                <div>
-                  <span className="text-[#FFC72C] font-semibold block">Electronic City Campus:</span>
-                  Located in Electronic City Phase 1, Opposite Infosys Gate 1. Accessible via Namma Metro Yellow Line (Infosys Foundation / Electronic City Station) and Elevated Expressway from Silk Board. All sports tournaments and festival arenas are hosted on campus grounds.
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
       </div>

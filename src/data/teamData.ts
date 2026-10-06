@@ -17,7 +17,7 @@ import utkarshImg from '../assets/images/Utkarsh.jpeg';
 import varunImg from '../assets/images/coord_varun_portrait_1790531424265.jpg';
 import ayush from '../assets/images/ayush.jpeg';
 import sachin from '../assets/images/sachin.jpeg';
-
+import vaibhav from '../assets/images/vaibhav.png';
 import bhargava from '../assets/images/bhargava.jpeg';
 import raadhesh from '../assets/images/raadhesh.jpeg';
 import ansh from '../assets/images/anshgupta.jpeg';
@@ -27,7 +27,6 @@ import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
 import webLeadImg from '../assets/images/team_web_lead_portrait_1790608705709.jpg';
 import designLeadImg from '../assets/images/team_design_lead_portrait_1790608720586.jpg';
 import frontendDevImg from '../assets/images/team_frontend_portrait_1790608738699.jpg';
-import sportsDirectorImg from '../assets/images/coord_kavya_portrait_1790531438890.jpg';
 
 export type TeamCategory = 'sports_comm' | 'website' | 'design';
 
@@ -188,7 +187,7 @@ export const WEBSITE_TEAM: TeamMember[] = [
     department: "IIITB",
     phone: "+91 98450 18234",
     phoneRaw: "+919845018234",
-    photoUrl: arjunImg,
+    photoUrl: vaibhav,
     linkedin: "https://www.linkedin.com/in/vaibhav-kakaraparthi-96335b3a6/",
     instagram: "https://www.instagram.com/",
     email: "Vaibhav.Kakaraparthi@iiitb.ac.in",

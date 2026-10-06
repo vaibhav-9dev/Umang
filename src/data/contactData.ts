@@ -6,37 +6,6 @@
 import abhiimg from '../assets/images/AbhiRam.jpeg';
 import ansh from '../assets/images/Ansh.png';
 import ajay from '../assets/images/Ajay.jpeg';
-import sportsDirectorImg from '../assets/images/coord_kavya_portrait_1790531438890.jpg';
-import nehamam from '../assets/images/neha.jpeg';
-
-export interface SportsDirectorContact {
-  name: string;
-  role: string;
-  designation: string;
-  department: string;
-  institute: string;
-  email: string;
-  phone: string;
-  phoneRaw: string;
-  photoUrl: string;
-  linkedin: string;
-  officeHours: string;
-}
-
-export const SPORTS_DIRECTOR: SportsDirectorContact = {
-  name: "Dr. Neha Arora",
-  role: "Sports Director",
-  designation: "Sports Officer / Sports Director",
-  department: "Department of Physical Education & Sports",
-  institute: "IIIT Bangalore",
-  email: "neha.arora@iiitb.ac.in",
-  phone: "+91 80 4140 7777",
-  phoneRaw: "+918041407777",
-  photoUrl: nehamam,
-  linkedin: "https://www.linkedin.com/in/neha-arora-phd-83384b264/",
-  officeHours: "09:30 AM – 06:00 PM IST (Mon – Fri)"
-};
-
 
 export interface ContactPerson {
   id: string;
@@ -120,8 +89,6 @@ export const CONTACT_CONFIG = {
     studentConvenorPhone: "+91 80 4140 7777",
     helpdeskHours: "09:00 AM - 08:00 PM IST"
   },
-  // Sports Director / Officer
-  sportsDirector: SPORTS_DIRECTOR,
   // 3 Primary Student Contact Coordinators
   coordinators: [
     {
