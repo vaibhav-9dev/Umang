@@ -79,19 +79,19 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: College Campuses & Addresses (5 cols) */}
+          {/* Column 2: College Campus & Address (5 cols) */}
           <div className="lg:col-span-5 flex flex-col">
             <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-[#F8FAFC] mb-4 flex items-center gap-2">
               <MapPin className="w-4 h-4 text-[#F5B81C]" />
-              CAMPUSES & VENUES
+              CAMPUS & VENUE
             </span>
 
-            <div className="font-sans text-xs sm:text-sm text-[#94A3B8] space-y-3.5 leading-relaxed">
-              {/* Main E-City Campus */}
-              <div className="p-3.5 bg-[#03091F] border border-[#F5B81C]/25 rounded-none space-y-1.5 shadow-md">
+            <div className="font-sans text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
+              {/* E-City Campus */}
+              <div className="p-4 bg-[#03091F] border border-[#F5B81C]/25 rounded-none space-y-2 shadow-md">
                 <div className="flex items-center justify-between">
                   <strong className="text-[#FFC72C] block font-cinzel text-xs sm:text-sm uppercase tracking-wider font-bold">
-                    E-City Main Campus
+                    IIIT Bangalore (E-City Campus)
                   </strong>
                   <span className="text-[11px] font-mono font-bold px-1.5 py-0.5 bg-[#F5B81C]/20 text-[#FFC72C] border border-[#F5B81C]/40">
                     560100
@@ -101,40 +101,12 @@ export const Footer: React.FC = () => {
                   26/C, Electronic City Phase 1, Hosur Road, Bengaluru, Karnataka
                 </p>
                 <p className="text-[11px] sm:text-xs text-[#94A3B8] italic">
-                  Landmark: Opposite Infosys Gate 1
+                  Landmark: Opposite Infosys Gate 1, Electronic City Phase 1
                 </p>
-                <div className="pt-1.5">
+                <div className="pt-2 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-[11px] text-[#94A3B8]">Yellow Line Metro Accessible</span>
                   <a
                     href={CONTACT_CONFIG.campuses[0].map.directionsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold text-[#FFC72C] hover:underline"
-                  >
-                    <span>Open in Maps</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Extension Campus */}
-              <div className="p-3.5 bg-[#03091F] border border-[#F5B81C]/25 rounded-none space-y-1.5 shadow-md">
-                <div className="flex items-center justify-between">
-                  <strong className="text-[#FFC72C] block font-cinzel text-xs sm:text-sm uppercase tracking-wider font-bold">
-                    Hosa Road Extension
-                  </strong>
-                  <span className="text-[11px] font-mono font-bold px-1.5 py-0.5 bg-[#F5B81C]/20 text-[#FFC72C] border border-[#F5B81C]/40">
-                    560114
-                  </span>
-                </div>
-                <p className="text-xs sm:text-[13px] text-[#CBD5E1] leading-relaxed">
-                  65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru
-                </p>
-                <p className="text-[11px] sm:text-xs text-[#94A3B8] italic">
-                  Landmark: Off Hosa Road, Near Singasandra
-                </p>
-                <div className="pt-1.5">
-                  <a
-                    href={CONTACT_CONFIG.campuses[1].map.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-semibold text-[#FFC72C] hover:underline"

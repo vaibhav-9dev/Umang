@@ -6,6 +6,36 @@
 import abhiimg from '../assets/images/AbhiRam.jpeg';
 import ansh from '../assets/images/Ansh.png';
 import ajay from '../assets/images/Ajay.jpeg';
+import sportsDirectorImg from '../assets/images/coord_kavya_portrait_1790531438890.jpg';
+import nehamam from '../assets/images/neha.jpeg';
+
+export interface SportsDirectorContact {
+  name: string;
+  role: string;
+  designation: string;
+  department: string;
+  institute: string;
+  email: string;
+  phone: string;
+  phoneRaw: string;
+  photoUrl: string;
+  linkedin: string;
+  officeHours: string;
+}
+
+export const SPORTS_DIRECTOR: SportsDirectorContact = {
+  name: "Dr. Neha Arora",
+  role: "Sports Director",
+  designation: "Sports Officer / Sports Director",
+  department: "Department of Physical Education & Sports",
+  institute: "IIIT Bangalore",
+  email: "neha.arora@iiitb.ac.in",
+  phone: "+91 80 4140 7777",
+  phoneRaw: "+918041407777",
+  photoUrl: nehamam,
+  linkedin: "https://www.linkedin.com/in/neha-arora-phd-83384b264/",
+  officeHours: "09:30 AM – 06:00 PM IST (Mon – Fri)"
+};
 
 
 export interface ContactPerson {
@@ -23,7 +53,7 @@ export interface ContactPerson {
 }
 
 export interface CampusLocation {
-  id: 'ecity' | 'extension';
+  id: 'ecity';
   name: string;
   shortName: string;
   campusTag: string;
@@ -47,7 +77,7 @@ export interface CampusLocation {
 export const CAMPUS_LOCATIONS: CampusLocation[] = [
   {
     id: "ecity",
-    name: "IIIT Bangalore — Main Campus (Electronic City)",
+    name: "IIIT Bangalore — Electronic City Campus",
     shortName: "E-City Campus",
     campusTag: "Electronic City Campus",
     street: "26/C, Electronic City Phase 1, Hosur Road",
@@ -65,36 +95,15 @@ export const CAMPUS_LOCATIONS: CampusLocation[] = [
       embedSatelliteUrl: "https://maps.google.com/maps?q=12.8448,77.6632&t=k&z=17&ie=UTF8&iwloc=&output=embed",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=International+Institute+of+Information+Technology+Bangalore"
     }
-  },
-  {
-    id: "extension",
-    name: "IIIT Bangalore — Extension Campus (Hosa Road)",
-    shortName: "Extension Campus",
-    campusTag: "Hosa Road Extension Campus",
-    street: "65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur",
-    area: "Singasandra / Off Hosa Road",
-    city: "Bengaluru",
-    state: "Karnataka",
-    pincode: "560114",
-    country: "India",
-    landmark: "Off Hosa Road, Near Singasandra / Begur",
-    fullAddress: "65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru, Karnataka 560114",
-    transit: "Located near Hosa Road & Hosur Main Road. Conveniently accessible via Singasandra / Hosa Road junction, close to Singasandra Metro Station.",
-    map: {
-      latitude: 12.8762,
-      longitude: 77.6438,
-      embedSatelliteUrl: "https://maps.google.com/maps?q=12.8762,77.6438&t=k&z=17&ie=UTF8&iwloc=&output=embed",
-      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=65,+Aishwarya+Crystal+Layout,+Singasandra,+Off+Hosa+Road,+Begur,+Bengaluru,+Karnataka+560114"
-    }
   }
 ];
 
 export const CONTACT_CONFIG = {
-  collegeName: "International Institute of Information Technology Bangalore (E-City Campus & Extension Campus)",
+  collegeName: "International Institute of Information Technology Bangalore (E-City Campus)",
   shortName: "IIIT Bangalore",
   festivalName: "UMANG 2026",
   campuses: CAMPUS_LOCATIONS,
-  // Main E-City Campus (default address for backwards compatibility)
+  // E-City Campus address
   address: {
     street: "26/C, Electronic City Phase 1, Hosur Road",
     area: "Electronics City",
@@ -102,19 +111,8 @@ export const CONTACT_CONFIG = {
     state: "Karnataka",
     pincode: "560100",
     country: "India",
-    landmark: "Opposite of Infosys Gate 1, Electronic City Phase 1",
+    landmark: "Opposite Infosys Gate 1, Electronic City Phase 1",
     fullAddress: "26/C, Electronic City Phase 1, Hosur Road, Bengaluru, Karnataka 560100"
-  },
-  // Extension Campus Address
-  extensionCampusAddress: {
-    street: "65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur",
-    area: "Singasandra / Off Hosa Road",
-    city: "Bengaluru",
-    state: "Karnataka",
-    pincode: "560114",
-    country: "India",
-    landmark: "Off Hosa Road, Near Singasandra / Begur",
-    fullAddress: "65, Aishwarya Crystal Layout, Singasandra, Off Hosa Road, Begur, Bengaluru, Karnataka 560114"
   },
   contacts: {
     sportsEmail: "sportscomm@iiitb.ac.in",
@@ -122,6 +120,8 @@ export const CONTACT_CONFIG = {
     studentConvenorPhone: "+91 80 4140 7777",
     helpdeskHours: "09:00 AM - 08:00 PM IST"
   },
+  // Sports Director / Officer
+  sportsDirector: SPORTS_DIRECTOR,
   // 3 Primary Student Contact Coordinators
   coordinators: [
     {

@@ -184,7 +184,7 @@ export const AboutPage: React.FC = () => {
             </h3>
 
             <p className="font-sans text-xs sm:text-sm text-[#94A3B8] leading-relaxed font-light mb-4">
-              Across its premier main campus in Electronics City Phase 1 and its modern Extension Campus at Hosa Road (Singasandra), IIIT Bangalore opens its courts, pitches, and athletic complexes to hundreds of collegiate athletes from across India.
+              Across its premier campus in Electronic City Phase 1, IIIT Bangalore opens its courts, pitches, and athletic complexes to hundreds of collegiate athletes from across India.
             </p>
 
             <p className="font-sans text-xs sm:text-sm text-[#94A3B8] leading-relaxed font-light mb-8">

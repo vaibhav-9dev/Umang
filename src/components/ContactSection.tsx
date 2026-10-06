@@ -9,7 +9,8 @@ import {
   ExternalLink, 
   Copy, 
   Check, 
-  MessageCircle 
+  MessageCircle,
+  Trophy
 } from 'lucide-react';
 import { CONTACT_CONFIG } from '../data/contactData';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider } from './GreekDecorations';
@@ -18,9 +19,7 @@ import sportsArenaImg from '../assets/images/olympus_athletics_arena_17905301724
 
 export const ContactSection: React.FC = () => {
   const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
-  const [activeCampusId, setActiveCampusId] = useState<'ecity' | 'extension'>('ecity');
-
-  const activeCampus = CONTACT_CONFIG.campuses.find((c) => c.id === activeCampusId) || CONTACT_CONFIG.campuses[0];
+  const activeCampus = CONTACT_CONFIG.campuses[0];
 
   const handleCopyPhone = (phone: string, id: string) => {
     navigator.clipboard.writeText(phone);
@@ -70,6 +69,109 @@ export const ContactSection: React.FC = () => {
 
           <div className="mt-3.5 flex items-center justify-center">
             <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
+          </div>
+        </div>
+
+        {/* ============================================================ */}
+        {/* SPORTS DIRECTOR & FACULTY LEADERSHIP */}
+        {/* ============================================================ */}
+        <div className="mb-14">
+          <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-[#F5B81C]/20">
+            <div className="flex items-center gap-2">
+              <Trophy className="w-5 h-5 text-[#F5B81C]" />
+              <h3 className="font-cinzel text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-[#F8FAFC]">
+                SPORTS DIRECTOR & FACULTY LEAD
+              </h3>
+            </div>
+            <span className="font-sans text-xs text-[#FFC72C] hidden sm:block">
+              IIIT Bangalore Physical Education & Sports
+            </span>
+          </div>
+
+          <div className="bg-[#03091F]/95 border-2 border-[#F5B81C]/40 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            {/* Greek corner accents */}
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#F5B81C]" />
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#F5B81C]" />
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#F5B81C]" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C]" />
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
+              {/* Photo */}
+              <div className="md:col-span-4 lg:col-span-3 flex justify-center">
+                <div className="relative aspect-square w-48 sm:w-56 overflow-hidden bg-[#01040E] border-2 border-[#F5B81C]/40 shadow-xl group">
+                  <img
+                    src={CONTACT_CONFIG.sportsDirector.photoUrl}
+                    alt={CONTACT_CONFIG.sportsDirector.name}
+                    className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-2 right-2 bg-[#01040E]/90 px-2.5 py-1 border border-[#F5B81C]/40">
+                    <span className="font-cinzel text-[10px] uppercase tracking-widest text-[#FFC72C] font-bold">
+                      DIRECTOR
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Info & Credentials */}
+              <div className="md:col-span-8 lg:col-span-9 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F5B81C]/15 border border-[#F5B81C]/40 text-[#FFC72C] font-cinzel text-xs font-bold uppercase tracking-widest mb-2">
+                    <LaurelWreath className="w-3.5 h-3.5 text-[#F5B81C]" />
+                    <span>SPORTS OFFICER & DIRECTOR</span>
+                  </div>
+
+                  <h4 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.12em] text-[#F8FAFC]">
+                    {CONTACT_CONFIG.sportsDirector.name}
+                  </h4>
+
+                  <p className="font-sans text-xs sm:text-sm text-[#FFC72C] font-semibold tracking-wider mt-1 mb-2">
+                    {CONTACT_CONFIG.sportsDirector.department} · {CONTACT_CONFIG.sportsDirector.institute}
+                  </p>
+
+                  <p className="font-sans text-xs text-[#94A3B8] leading-relaxed max-w-2xl mb-6">
+                    Directing collegiate athletic operations, arena governance, and tournament logistics across IIIT Bangalore for UMANG 2026.
+                  </p>
+                </div>
+
+                {/* Contact Action Bar */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
+                  <a
+                    href={`mailto:${CONTACT_CONFIG.sportsDirector.email}`}
+                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/30 text-xs font-sans text-[#F8FAFC] transition-all"
+                  >
+                    <Mail className="w-4 h-4 text-[#F5B81C]" />
+                    <div>
+                      <span className="text-[10px] text-[#94A3B8] block uppercase">Official Email</span>
+                      <span className="font-medium truncate block max-w-[170px]">{CONTACT_CONFIG.sportsDirector.email}</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href={`tel:${CONTACT_CONFIG.sportsDirector.phoneRaw}`}
+                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/30 text-xs font-sans text-[#F8FAFC] transition-all"
+                  >
+                    <Phone className="w-4 h-4 text-[#F5B81C]" />
+                    <div>
+                      <span className="text-[10px] text-[#94A3B8] block uppercase">Institute Phone</span>
+                      <span className="font-medium">{CONTACT_CONFIG.sportsDirector.phone}</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href={CONTACT_CONFIG.sportsDirector.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 p-2.5 bg-[#01040E] hover:bg-[#0077B5] border border-[#0077B5]/40 text-xs font-sans text-[#F8FAFC] transition-all"
+                  >
+                    <Linkedin className="w-4 h-4 text-[#0077B5]" />
+                    <div>
+                      <span className="text-[10px] text-[#94A3B8] block uppercase">Professional Network</span>
+                      <span className="font-medium">LinkedIn Profile</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -247,47 +349,25 @@ export const ContactSection: React.FC = () => {
         {/* ============================================================ */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          {/* Left Column (7 cols): Google Maps Satellite View Embed & Campus Switcher */}
+          {/* Left Column (7 cols): Google Maps Satellite View Embed */}
           <div className="lg:col-span-7 flex flex-col gap-4">
             
-            {/* Campus Selector Tabs */}
-            <div className="bg-[#03091F]/90 border border-[#F5B81C]/30 p-1.5 flex flex-col sm:flex-row gap-2">
-              {CONTACT_CONFIG.campuses.map((campus) => {
-                const isActive = campus.id === activeCampusId;
-                return (
-                  <button
-                    key={campus.id}
-                    onClick={() => setActiveCampusId(campus.id)}
-                    className={`flex-1 px-4 py-2.5 text-left transition-all flex items-center justify-between border cursor-pointer ${
-                      isActive
-                        ? 'bg-gradient-to-r from-[#F5B81C]/25 to-[#FFC72C]/15 border-[#F5B81C] text-[#F8FAFC]'
-                        : 'bg-[#01040E] border-white/5 text-[#94A3B8] hover:border-[#F5B81C]/40 hover:text-[#F8FAFC]'
-                    }`}
-                  >
-                    <div>
-                      <div className="flex items-center gap-1.5">
-                        <MapPin className={`w-3.5 h-3.5 ${isActive ? 'text-[#FFC72C]' : 'text-[#94A3B8]'}`} />
-                        <span className="font-cinzel text-xs font-bold uppercase tracking-wider block">
-                          {campus.shortName}
-                        </span>
-                      </div>
-                      <span className="text-[11px] font-sans text-[#94A3B8]/80 block mt-0.5">
-                        {campus.area} · PIN {campus.pincode}
-                      </span>
-                    </div>
-
-                    <span
-                      className={`text-[10px] font-cinzel uppercase px-2 py-0.5 border ${
-                        isActive
-                          ? 'border-[#F5B81C] text-[#FFC72C] bg-[#F5B81C]/20 font-bold'
-                          : 'border-white/10 text-[#94A3B8]/60'
-                      }`}
-                    >
-                      {isActive ? 'ACTIVE VIEW' : 'SELECT'}
-                    </span>
-                  </button>
-                );
-              })}
+            {/* Campus Identification Header */}
+            <div className="bg-[#03091F]/90 border border-[#F5B81C]/30 p-3 sm:p-3.5 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <MapPin className="w-4 h-4 text-[#FFC72C]" />
+                <div>
+                  <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-wider text-[#F8FAFC] block">
+                    IIIT BANGALORE · ELECTRONIC CITY CAMPUS
+                  </span>
+                  <span className="text-[11px] font-sans text-[#94A3B8]/90 block mt-0.5">
+                    Electronics City Phase 1 · Bengaluru, Karnataka 560100
+                  </span>
+                </div>
+              </div>
+              <span className="hidden sm:inline-block text-[10px] font-cinzel uppercase px-2.5 py-1 border border-[#F5B81C]/50 text-[#FFC72C] bg-[#F5B81C]/15 font-bold">
+                TOURNAMENT ARENAS
+              </span>
             </div>
 
             {/* Map Frame */}
@@ -348,66 +428,36 @@ export const ContactSection: React.FC = () => {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2 font-cinzel text-xs font-bold uppercase tracking-wider text-[#01040E] bg-gradient-to-r from-[#FFC72C] to-[#F5B81C] hover:brightness-110 transition-all shrink-0 font-semibold"
                 >
                   <Navigation className="w-3.5 h-3.5" />
-                  <span>DIRECTIONS TO {activeCampus.shortName.toUpperCase()}</span>
+                  <span>GET DIRECTIONS TO CAMPUS</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>
 
-            {/* Side-by-Side Dual Campus Reference Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {CONTACT_CONFIG.campuses.map((c) => {
-                const isCurrent = c.id === activeCampusId;
-                return (
-                  <div
-                    key={c.id}
-                    className={`p-3.5 border transition-all ${
-                      isCurrent
-                        ? 'bg-[#061438] border-[#F5B81C]/70 shadow-lg'
-                        : 'bg-[#03091F]/80 border-white/5 hover:border-[#F5B81C]/30'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#F8FAFC] flex items-center gap-1.5">
-                        <MapPin className="w-3 h-3 text-[#F5B81C]" />
-                        {c.name}
-                      </span>
-                      <span className="text-[10px] font-mono px-1.5 py-0.5 bg-[#F5B81C]/10 text-[#FFC72C] border border-[#F5B81C]/30">
-                        {c.pincode}
-                      </span>
-                    </div>
+            {/* E-City Campus Detail Card */}
+            <div className="p-4 bg-[#03091F]/90 border border-[#F5B81C]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg">
+              <div>
+                <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#FFC72C] flex items-center gap-1.5 mb-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#F5B81C]" />
+                  VENUE ADDRESS & LANDMARK
+                </span>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  26/C, Opposite Infosys Gate 1, Electronic City Phase 1, Hosur Road, Bengaluru 560100
+                </p>
+                <p className="text-[11px] text-[#94A3B8] italic mt-0.5">
+                  Adjacent to Namma Metro Yellow Line (Electronic City Station) & Elevated Expressway
+                </p>
+              </div>
 
-                    <p className="text-[11px] text-[#94A3B8] leading-relaxed mb-1">
-                      {c.street}, {c.city}
-                    </p>
-                    <p className="text-[10px] text-[#94A3B8]/70 italic mb-2.5">
-                      Landmark: {c.landmark}
-                    </p>
-
-                    <div className="flex items-center gap-2 pt-2 border-t border-white/5">
-                      <button
-                        onClick={() => setActiveCampusId(c.id)}
-                        className={`text-[10px] font-cinzel uppercase px-2.5 py-1 border transition-colors cursor-pointer ${
-                          isCurrent
-                            ? 'bg-[#F5B81C] text-[#01040E] font-bold border-[#F5B81C]'
-                            : 'border-white/10 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#F5B81C]/50'
-                        }`}
-                      >
-                        {isCurrent ? 'Viewing Map' : 'View on Map'}
-                      </button>
-                      <a
-                        href={c.map.directionsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[10px] font-cinzel uppercase text-[#FFC72C] hover:underline ml-auto"
-                      >
-                        <span>Navigate</span>
-                        <ExternalLink className="w-2.5 h-2.5" />
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
+              <a
+                href={activeCampus.map.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#01040E] hover:bg-[#F5B81C] hover:text-[#01040E] border border-[#F5B81C]/40 text-xs font-cinzel uppercase font-bold text-[#FFC72C] transition-all shrink-0 cursor-pointer"
+              >
+                <span>OPEN GOOGLE MAPS</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
 
           </div>
@@ -487,20 +537,16 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Transit Guidance for Both Campuses */}
+            {/* Transit Guidance */}
             <div className="p-4 bg-[#03091F] border border-[#F5B81C]/25 flex items-start gap-3">
               <GreekColumnIcon className="w-4 h-7 text-[#F5B81C] shrink-0 mt-0.5" />
-              <div className="text-xs text-[#94A3B8] leading-relaxed space-y-2">
+              <div className="text-xs text-[#94A3B8] leading-relaxed space-y-1.5">
                 <strong className="text-[#F8FAFC] block font-cinzel text-[11px] uppercase tracking-wider">
                   CAMPUS ENTRY & ACCESS GUIDE
                 </strong>
                 <div>
-                  <span className="text-[#FFC72C] font-semibold block">E-City Main Campus:</span>
-                  Located in Electronic City Phase 1. Accessible via Namma Metro Yellow Line (Infosys Foundation / Electronic City Station) and Elevated Expressway from Silk Board.
-                </div>
-                <div>
-                  <span className="text-[#FFC72C] font-semibold block">Hosa Road Extension Campus:</span>
-                  Located Off Hosa Road, Begur / Singasandra. Accessible via Hosur Main Road and Singasandra Metro Station.
+                  <span className="text-[#FFC72C] font-semibold block">Electronic City Campus:</span>
+                  Located in Electronic City Phase 1, Opposite Infosys Gate 1. Accessible via Namma Metro Yellow Line (Infosys Foundation / Electronic City Station) and Elevated Expressway from Silk Board. All sports tournaments and festival arenas are hosted on campus grounds.
                 </div>
               </div>
             </div>
