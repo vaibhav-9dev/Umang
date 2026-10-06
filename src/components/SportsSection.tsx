@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, Flame, Trophy, Award } from 'lucide-react';
 import { SPORTS_DATA, Sport } from '../data/sportsData';
 import { SportCard } from './SportCard';
-import { LaurelWreath, GreekMeanderStrip } from './GreekDecorations';
+import { LaurelWreath } from './GreekDecorations';
 import sportsArenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
 
 interface SportsSectionProps {

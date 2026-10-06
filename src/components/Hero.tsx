@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
 
       {/* Decorative Classical Borders */}
       <div className="absolute top-16 left-0 right-0 z-10 pointer-events-none">
-        <GreekMeanderStrip className="w-full h-2.5 text-[#F5B81C]" opacity="opacity-45" />
+        <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-45" />
       </div>
 
       {/* Main Hero Content - Split Layout */}
@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
 
       {/* Bottom Greek Edge Divider */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-        <GreekMeanderStrip className="w-full h-2 text-[#F5B81C]" opacity="opacity-35" />
+        <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-35" />
       </div>
     </section>
   );

@@ -52,25 +52,32 @@ export const GreekColumnIcon: React.FC<{ className?: string }> = ({ className = 
  * Greek Meander Key Pattern Horizontal Strip matching the Umang '26 Logo
  */
 export const GreekMeanderStrip: React.FC<{ className?: string; opacity?: string }> = ({ 
-  className = "w-full h-3.5 text-[#F5B81C]",
+  className = "w-full h-4 text-[#F5B81C]",
   opacity = "opacity-75"
-}) => (
-  <div className={`overflow-hidden flex items-center justify-center ${className} ${opacity}`} aria-hidden="true">
-    <svg className="w-full h-3.5" viewBox="0 0 400 14" fill="none" preserveAspectRatio="repeat">
-      <pattern id="greek-meander" width="32" height="14" patternUnits="userSpaceOnUse">
-        <path
-          d="M0 13 H28 V2 H10 V9 H20 V6 H15"
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="square"
-          strokeLinejoin="miter"
-        />
-      </pattern>
-      <rect width="100%" height="14" fill="url(#greek-meander)" />
-    </svg>
-  </div>
-);
+}) => {
+  const rawId = React.useId();
+  const patternId = `greek-meander-${rawId.replace(/[^a-zA-Z0-9_-]/g, '')}`;
+
+  return (
+    <div className={`overflow-hidden flex items-center justify-center min-h-[16px] ${className} ${opacity}`} aria-hidden="true">
+      <svg className="w-full h-4 shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id={patternId} width="28" height="16" patternUnits="userSpaceOnUse">
+            <path
+              d="M0 14 H22 V2 H6 V9 H16 V6 H11 M22 14 H28"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              fill="none"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="16" fill={`url(#${patternId})`} />
+      </svg>
+    </div>
+  );
+};
 
 /**
  * Olympian Divider with Centered Emblem

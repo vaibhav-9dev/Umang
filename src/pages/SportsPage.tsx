@@ -255,7 +255,7 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                     </div>
                   </div>
 
-                  <GreekMeanderStrip className="w-full h-1.5 text-[#F5B81C]" opacity="opacity-30" />
+                  <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-30" />
 
                   {/* Card Primary Action: VIEW EVENTS (Navigates to dedicated page) */}
                   <div className="relative z-10 p-5 pt-0 bg-transparent">

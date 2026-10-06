@@ -70,7 +70,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterNow }) => {
 
       {/* Decorative Meander Line on bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-        <GreekMeanderStrip className="w-full h-2 text-[#F5B81C]" opacity="opacity-35" />
+        <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-35" />
       </div>
     </section>
   );

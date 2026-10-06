@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-[#01030B] border-t border-[#F5B81C]/30 text-[#94A3B8] pt-16 pb-12">
       {/* Decorative Greek Meander Border at top of Footer */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none">
-        <GreekMeanderStrip className="w-full h-2 text-[#F5B81C]" opacity="opacity-35" />
+        <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-35" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

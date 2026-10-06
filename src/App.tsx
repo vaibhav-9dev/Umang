@@ -15,7 +15,7 @@ import { AboutPage } from './pages/AboutPage';
 import { TeamPage } from './pages/TeamPage';
 import { ContactPage } from './pages/ContactPage';
 import { RegistrationToast } from './components/RegistrationToast';
-import { OlympusPillarsWithCurtains } from './components/OlympusPillarsWithCurtains';
+import { UmangIntroAnimation } from './components/UmangIntroAnimation';
 
 function AppContent() {
   const { currentRoute, currentSportId } = useNavigation();
@@ -51,8 +51,8 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-[#01040E] text-[#F8FAFC] flex flex-col font-sans selection:bg-[#F5B81C] selection:text-[#01040E] olympian-stars-bg relative">
-      {/* Theatrical Curtains Opening & Classical Greek White Pillars on Both Sides */}
-      <OlympusPillarsWithCurtains />
+      {/* Dynamic Umang '26 Letter-Pop Intro Animation */}
+      <UmangIntroAnimation />
 
       {/* Sticky Responsive Navigation Bar on Every Page */}
       <Navbar />

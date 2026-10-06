@@ -146,7 +146,7 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
             </div>
           </div>
 
-          <GreekMeanderStrip className="w-full h-1.5 text-[#F5B81C]" opacity="opacity-30" />
+          <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-30" />
         </div>
       </div>
 

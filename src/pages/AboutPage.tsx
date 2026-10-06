@@ -87,7 +87,7 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 z-10">
-            <GreekMeanderStrip className="w-full h-1.5 text-[#F5B81C]" opacity="opacity-35" />
+            <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-35" />
           </div>
         </div>
       </div>

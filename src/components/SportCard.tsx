@@ -141,7 +141,7 @@ export const SportCard: React.FC<SportCardProps> = ({
       </div>
 
       {/* Decorative Greek Meander Accent Line */}
-      <GreekMeanderStrip className="w-full h-1.5 text-[#F5B81C]" opacity="opacity-40" />
+      <GreekMeanderStrip className="w-full h-4 text-[#F5B81C]" opacity="opacity-40" />
 
       {/* Card Action: VIEW EVENTS Button */}
       <div className="relative z-10 p-5 pt-0 bg-transparent">
