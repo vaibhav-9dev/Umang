@@ -58,15 +58,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
           </div>
 
           {/* Right Side: Olympus Reborn & Action Buttons */}
-          <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
-            {/* Institution Presenter Tagline at top of Olympus Reborn */}
-            <div className="flex items-center gap-2 mb-2 sm:mb-3">
-              <span className="w-4 h-[1px] bg-[#F5B81C]/60 hidden sm:inline-block" />
-              <p className="font-cinzel text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.22em] text-[#FFC72C] leading-snug drop-shadow-md">
-                INTERNATIONAL INSTITUTE OF INFORMATION TECHNOLOGY BANGALORE PRESENTS
-              </p>
-            </div>
+         {/* Right Side: Olympus Reborn & Action Buttons */}
+<div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
+  {/* Institution Presenter Tagline at top of Olympus Reborn */}
+  <div className="flex items-center gap-2 mb-2 sm:mb-3">
+    <span className="w-4 h-[1px] bg-white/60 hidden sm:inline-block" />
 
+    <p className="font-cinzel text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.22em] text-white leading-snug drop-shadow-md">
+      INTERNATIONAL INSTITUTE OF INFORMATION TECHNOLOGY BANGALORE PRESENTS
+    </p>
+  </div>
             {/* Olympus Reborn Headline */}
             <h1 className="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-black tracking-[0.1em] uppercase leading-[0.95] text-gold-gradient drop-shadow-2xl mb-3">
               OLYMPUS
