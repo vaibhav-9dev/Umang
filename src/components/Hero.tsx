@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, Calendar } from 'lucide-react';
 import { LaurelWreath, GreekMeanderStrip } from './GreekDecorations';
 import { UmangLogo } from './UmangLogo';
 import heroBgImage from '../assets/images/olympus_hero_cinematic_1790530158793.jpg';
@@ -59,6 +59,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
 
           {/* Right Side: Olympus Reborn & Action Buttons */}
           <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
+            {/* Institution Presenter Tagline at top of Olympus Reborn */}
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <span className="w-4 h-[1px] bg-[#F5B81C]/60 hidden sm:inline-block" />
+              <p className="font-cinzel text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.22em] text-[#FFC72C] leading-snug drop-shadow-md">
+                INTERNATIONAL INSTITUTE OF INFORMATION TECHNOLOGY BANGALORE PRESENTS
+              </p>
+            </div>
+
             {/* Olympus Reborn Headline */}
             <h1 className="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-black tracking-[0.1em] uppercase leading-[0.95] text-gold-gradient drop-shadow-2xl mb-3">
               OLYMPUS
@@ -68,9 +76,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
             </h1>
 
             {/* Description */}
-            <p className="font-sans text-xs sm:text-sm md:text-base text-[#94A3B8] font-light leading-relaxed max-w-lg mb-6">
+            <p className="font-sans text-xs sm:text-sm md:text-base text-[#94A3B8] font-light leading-relaxed max-w-lg mb-5">
               A celebration of collegiate athleticism, unyielding honor, and campus spirit across IIIT Bangalore. Step onto the courts and fields to showcase your sporting excellence.
             </p>
+
+            {/* Festival Dates Callout above Register Button */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 mb-5 bg-[#03091F]/90 border border-[#F5B81C]/50 shadow-[0_0_20px_rgba(245,184,28,0.25)] backdrop-blur-md">
+              <Calendar className="w-4 h-4 text-[#F5B81C] shrink-0" />
+              <p className="font-cinzel text-xs sm:text-sm md:text-base font-bold text-[#FFC72C] tracking-wide">
+                Join us for Umang on Oct 31, Nov 1 &amp; 2!
+              </p>
+            </div>
 
             {/* Action Buttons (REGISTER NOW and EXPLORE SPORTS) */}
             <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
