@@ -57,8 +57,8 @@ function AppContent() {
       {/* Sticky Responsive Navigation Bar on Every Page */}
       <Navbar />
 
-      {/* Main Routed Page Content Framed by Left-Most and Right-Most Greek Cream Pillars */}
-      <main className="flex-1 lg:px-12 xl:px-16 transition-all duration-300">
+      {/* Main Routed Page Content */}
+      <main className="flex-1 w-full transition-all duration-300">
         {renderActivePage()}
       </main>
 
