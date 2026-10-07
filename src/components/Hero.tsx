@@ -1,7 +1,8 @@
 import React from 'react';
-import { ChevronDown, ArrowRight, Calendar, Trophy } from 'lucide-react';
+import { ChevronDown, ArrowRight, Calendar, ExternalLink } from 'lucide-react';
 import { LaurelWreath, GreekMeanderStrip } from './GreekDecorations';
 import { UmangLogo } from './UmangLogo';
+import { BROCHURE_URL } from '../config/brochureConfig';
 import heroBgImage from '../assets/images/olympus_hero_cinematic_1790530158793.jpg';
 
 interface HeroProps {
@@ -56,48 +57,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreSports, onRegisterNow }) =>
               <LaurelWreath className="w-3.5 h-3.5 text-[#F5B81C] scale-x-[-1]" />
             </div>
 
-            {/* Grand Olympian Prize Pool Plaque below Umang Logo */}
-            <div className="mt-5 relative group w-full max-w-[340px]">
-              {/* Radiant Ambient Glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#F5B81C]/35 via-[#FFE066]/25 to-[#0B1D54]/50 rounded-sm blur-md opacity-80 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-              {/* The Plaque Card */}
-              <div className="relative px-4 py-3 sm:px-5 sm:py-3.5 bg-gradient-to-r from-[#03091F]/95 via-[#07123A]/90 to-[#020617]/95 border border-[#F5B81C]/65 shadow-[0_0_35px_rgba(245,184,28,0.3),inset_0_0_25px_rgba(245,184,28,0.1)] backdrop-blur-xl transition-all duration-300 group-hover:border-[#FFC72C] group-hover:shadow-[0_0_45px_rgba(245,184,28,0.5)]">
-                {/* Classical Greek Corner Accents */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#FFE066]" />
-                <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#FFE066]" />
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-[#FFE066]" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#FFE066]" />
-
-                <div className="flex items-center justify-center gap-3.5 sm:gap-4">
-                  {/* Radiant Trophy Medallion */}
-                  <div className="relative shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFE066] via-[#F5B81C] to-[#996E24] p-[2px] shadow-[0_0_18px_rgba(245,184,28,0.55)] group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-full h-full rounded-full bg-[#01040E] flex items-center justify-center">
-                      <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFC72C] filter drop-shadow-[0_0_8px_rgba(245,184,28,0.85)]" />
-                    </div>
-                  </div>
-
-                  {/* Typography & Prize Value */}
-                  <div className="flex flex-col text-left">
-                    <div className="flex items-center gap-1 mb-0.5">
-                      <LaurelWreath className="w-3 h-3 text-[#F5B81C]" />
-                      <span className="font-cinzel text-[10px] font-bold uppercase tracking-[0.24em] text-[#FFC72C]">
-                        GRAND PRIZE POOL
-                      </span>
-                      <LaurelWreath className="w-3 h-3 text-[#F5B81C] scale-x-[-1]" />
-                    </div>
-
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-cinzel text-2xl sm:text-3xl font-black text-gold-gradient tracking-tight drop-shadow-[0_2px_15px_rgba(245,184,28,0.6)] leading-none">
-                        ₹3,00,000
-                      </span>
-                      <span className="font-cinzel text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.16em] text-[#94A3B8] whitespace-nowrap">
-                        CASH &amp; TROPHIES
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Brochure Button in place of Prize Pool - Same dimensions as Register Button */}
+            <div className="mt-5 w-full flex justify-center">
+              <a
+                href={BROCHURE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#01040E] bg-gradient-to-r from-[#FFE066] via-[#F5B81C] to-[#FFC72C] border border-[#FFF4CE]/70 shadow-[0_0_30px_rgba(245,184,28,0.5)] hover:shadow-[0_0_45px_rgba(245,184,28,0.75)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+              >
+                <span>VIEW BROCHURE</span>
+                <ExternalLink className="w-4 h-4 text-[#01040E]" />
+              </a>
             </div>
           </div>
 
