@@ -14,6 +14,7 @@ import yashrajImg from '../assets/images/YashRaj.jpeg';
 import anshImg from '../assets/images/Ansh.png';
 import pratikImg from '../assets/images/Pratik.jpeg';
 import utkarshImg from '../assets/images/Utkarsh.jpeg';
+import yuktha from '../assets/images/yuktha.jpeg';
 import varunImg from '../assets/images/coord_varun_portrait_1790531424265.jpg';
 import ayush from '../assets/images/ayush.jpeg';
 import sachin from '../assets/images/sachin.jpeg';
@@ -156,7 +157,7 @@ export const SPORTS_COMMITTEE: TeamMember[] = [
     phone: "+91 86887 22565",
     phoneRaw: "+918688722565",
     photoUrl: yuktha,
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/yuktha-marisetti-371b113b3/",
     instagram: "https://www.instagram.com/",
     email: "Marisetti.Sri@iiitb.ac.in",
     teamCategory: 'sports_comm'
