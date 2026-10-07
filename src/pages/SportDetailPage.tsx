@@ -201,9 +201,48 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
                   {event.name}
                 </h3>
 
-                {/* Format description & notes */}
-                <p className="font-sans text-xs text-[#94A3B8] mb-6 leading-relaxed">
-                  Inter-college championship contest for {sport.name}. {event.notes || "Details will be announced soon."}
+                {/* Event Prize Pool Plaque */}
+                <div className="mt-3 mb-4 p-3 bg-[#01040E]/90 border border-[#F5B81C]/40 shadow-inner">
+                  <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-white/10">
+                    <div className="flex items-center gap-1.5">
+                      <Trophy className="w-3.5 h-3.5 text-[#FFC72C]" />
+                      <span className="font-cinzel text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
+                        CASH PRIZES
+                      </span>
+                    </div>
+                    <span className="font-cinzel text-[10px] text-[#94A3B8] uppercase tracking-wider">
+                      TOTAL: {(() => {
+                        const n1 = parseInt(event.firstPrize.replace(/[^0-9]/g, '')) || 0;
+                        const n2 = parseInt(event.secondPrize.replace(/[^0-9]/g, '')) || 0;
+                        return `₹${(n1 + n2).toLocaleString('en-IN')}`;
+                      })()}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 text-center">
+                    <div className="bg-[#03091F] border border-[#F5B81C]/40 px-2 py-2 flex flex-col justify-center">
+                      <span className="text-[9px] font-cinzel uppercase tracking-widest text-[#FFC72C] font-semibold">
+                        1ST PRIZE
+                      </span>
+                      <span className="font-cinzel text-base sm:text-lg font-black text-gold-gradient tracking-tight mt-0.5">
+                        {event.firstPrize}
+                      </span>
+                    </div>
+
+                    <div className="bg-[#03091F] border border-white/15 px-2 py-2 flex flex-col justify-center">
+                      <span className="text-[9px] font-cinzel uppercase tracking-widest text-[#94A3B8] font-semibold">
+                        2ND PRIZE
+                      </span>
+                      <span className="font-cinzel text-base sm:text-lg font-bold text-[#F8FAFC] tracking-tight mt-0.5">
+                        {event.secondPrize}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Brief description */}
+                <p className="font-sans text-xs text-[#94A3B8] mb-4 leading-relaxed">
+                  Inter-college championship contest for {sport.name}.
                 </p>
               </div>
 

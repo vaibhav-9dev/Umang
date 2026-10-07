@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, ArrowRight } from 'lucide-react';
+import { X, ExternalLink, ArrowRight, Trophy } from 'lucide-react';
 import { Sport, SportEvent } from '../data/sportsData';
 import { openRegistrationForm } from '../config/registrationLinks';
 import { LaurelWreath, GreekColumnIcon } from './GreekDecorations';
@@ -111,10 +111,13 @@ export const EventModal: React.FC<EventModalProps> = ({
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3 text-xs text-[#94A3B8]">
-                    <span>Format: {event.format}</span>
-                    <span>·</span>
-                    <span className="text-[#94A3B8]/70 italic">{event.notes}</span>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs mt-1">
+                    <span className="text-[#94A3B8]">Format: {event.format}</span>
+                    <span className="text-white/20">·</span>
+                    <span className="text-[#FFC72C] font-semibold font-cinzel text-xs flex items-center gap-1">
+                      <Trophy className="w-3 h-3 text-[#FFC72C] shrink-0" />
+                      1st: {event.firstPrize} | 2nd: {event.secondPrize}
+                    </span>
                   </div>
                 </div>
 

@@ -39,6 +39,8 @@ export interface SportEvent {
   category: "Men" | "Women" | "Mixed" | "Open";
   format: string;
   registrationKey: EventRegistrationKey;
+  firstPrize: string;
+  secondPrize: string;
   notes?: string;
 }
 
@@ -84,7 +86,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "3 vs 3 Half Court",
         registrationKey: "basketball_men_3v3",
-        notes: "Details will be announced soon."
+        firstPrize: "₹10,000",
+        secondPrize: "₹6,000",
+        notes: "1st Prize: ₹10,000 · 2nd Prize: ₹6,000"
       },
       {
         id: "basketball-m-5v5",
@@ -92,7 +96,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Full Court 5 vs 5",
         registrationKey: "basketball_men_5v5",
-        notes: "Details will be announced soon."
+        firstPrize: "₹20,000",
+        secondPrize: "₹12,500",
+        notes: "1st Prize: ₹20,000 · 2nd Prize: ₹12,500"
       },
       {
         id: "basketball-w-3v3",
@@ -100,7 +106,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Women",
         format: "3 vs 3 Half Court",
         registrationKey: "basketball_women_3v3",
-        notes: "Details will be announced soon."
+        firstPrize: "₹10,000",
+        secondPrize: "₹6,000",
+        notes: "1st Prize: ₹10,000 · 2nd Prize: ₹6,000"
       }
     ],
     sportSpecificRules: [
@@ -159,7 +167,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "6 vs 6 Squad",
         registrationKey: "football_men_6v6",
-        notes: "Details will be announced soon."
+        firstPrize: "₹20,000",
+        secondPrize: "₹12,500",
+        notes: "1st Prize: ₹20,000 · 2nd Prize: ₹12,500"
       }
     ],
     sportSpecificRules: [
@@ -218,7 +228,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Team Tournament",
         registrationKey: "table_tennis_mens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹10,000",
+        secondPrize: "₹6,000",
+        notes: "1st Prize: ₹10,000 · 2nd Prize: ₹6,000"
       },
       {
         id: "tt-m-singles",
@@ -226,7 +238,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Individual Singles",
         registrationKey: "table_tennis_mens_singles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹3,000",
+        secondPrize: "₹2,000",
+        notes: "1st Prize: ₹3,000 · 2nd Prize: ₹2,000"
       },
       {
         id: "tt-m-doubles",
@@ -234,7 +248,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Doubles Pair",
         registrationKey: "table_tennis_mens_doubles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹5,000",
+        secondPrize: "₹2,500",
+        notes: "1st Prize: ₹5,000 · 2nd Prize: ₹2,500"
       },
       {
         id: "tt-w-singles",
@@ -242,7 +258,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Women",
         format: "Individual Singles",
         registrationKey: "table_tennis_womens_singles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹3,000",
+        secondPrize: "₹2,000",
+        notes: "1st Prize: ₹3,000 · 2nd Prize: ₹2,000"
       },
       {
         id: "tt-mixed-doubles",
@@ -250,7 +268,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Mixed",
         format: "Mixed Pair",
         registrationKey: "table_tennis_mixed_doubles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹5,000",
+        secondPrize: "₹2,500",
+        notes: "1st Prize: ₹5,000 · 2nd Prize: ₹2,500"
       }
     ],
     sportSpecificRules: [
@@ -309,7 +329,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Team Championship",
         registrationKey: "badminton_mens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹14,000",
+        secondPrize: "₹9,000",
+        notes: "1st Prize: ₹14,000 · 2nd Prize: ₹9,000"
       },
       {
         id: "badminton-w-singles",
@@ -317,7 +339,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Women",
         format: "Individual Singles",
         registrationKey: "badminton_womens_singles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹3,000",
+        secondPrize: "₹2,000",
+        notes: "1st Prize: ₹3,000 · 2nd Prize: ₹2,000"
       },
       {
         id: "badminton-mixed-doubles",
@@ -325,7 +349,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Mixed",
         format: "Mixed Pair",
         registrationKey: "badminton_mixed_doubles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹5,000",
+        secondPrize: "₹2,500",
+        notes: "1st Prize: ₹5,000 · 2nd Prize: ₹2,500"
       },
       {
         id: "badminton-w-doubles",
@@ -333,7 +359,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Women",
         format: "Doubles Pair",
         registrationKey: "badminton_womens_doubles",
-        notes: "Details will be announced soon."
+        firstPrize: "₹5,000",
+        secondPrize: "₹2,500",
+        notes: "1st Prize: ₹5,000 · 2nd Prize: ₹2,500"
       }
     ],
     sportSpecificRules: [
@@ -392,7 +420,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Team Squad",
         registrationKey: "volleyball_mens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹20,000",
+        secondPrize: "₹12,500",
+        notes: "1st Prize: ₹20,000 · 2nd Prize: ₹12,500"
       }
     ],
     sportSpecificRules: [
@@ -451,7 +481,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Team Tournament",
         registrationKey: "tennis_mens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹8,000",
+        secondPrize: "₹5,000",
+        notes: "1st Prize: ₹8,000 · 2nd Prize: ₹5,000"
       }
     ],
     sportSpecificRules: [
@@ -510,7 +542,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Men",
         format: "Team Squad",
         registrationKey: "kabaddi_mens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹14,000",
+        secondPrize: "₹9,000",
+        notes: "1st Prize: ₹14,000 · 2nd Prize: ₹9,000"
       }
     ],
     sportSpecificRules: [
@@ -569,7 +603,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Women",
         format: "Team Squad",
         registrationKey: "throwball_womens_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹10,000",
+        secondPrize: "₹6,000",
+        notes: "1st Prize: ₹10,000 · 2nd Prize: ₹6,000"
       }
     ],
     sportSpecificRules: [
@@ -628,7 +664,9 @@ export const SPORTS_DATA: Sport[] = [
         category: "Open",
         format: "Team Championship",
         registrationKey: "chess_team",
-        notes: "Details will be announced soon."
+        firstPrize: "₹10,000",
+        secondPrize: "₹6,000",
+        notes: "1st Prize: ₹10,000 · 2nd Prize: ₹6,000"
       }
     ],
     sportSpecificRules: [

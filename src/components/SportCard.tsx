@@ -108,8 +108,8 @@ export const SportCard: React.FC<SportCardProps> = ({
                     <span className="font-cinzel text-xs text-[#F8FAFC] font-medium block truncate">
                       {event.name}
                     </span>
-                    <span className="text-[10px] text-[#94A3B8]">
-                      {event.format}
+                    <span className="text-[10px] text-[#FFC72C] font-cinzel font-semibold block">
+                      1st: {event.firstPrize} · 2nd: {event.secondPrize}
                     </span>
                   </div>
 
