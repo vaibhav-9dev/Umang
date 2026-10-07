@@ -22,6 +22,7 @@ import vaibhav from '../assets/images/vaibhav.png';
 import bhargava from '../assets/images/bhargava.jpeg';
 import raadhesh from '../assets/images/raadhesh.jpeg';
 import ansh from '../assets/images/anshgupta.jpeg';
+import pragun from '../assets/images/pragun.jpeg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
 import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
@@ -251,6 +252,20 @@ export const DESIGN_TEAM: TeamMember[] = [
     photoUrl: ansh,
     linkedin: "https://www.linkedin.com/in/ansh-gupta-2517b4426/",
     instagram: "https://www.instagram.com/",
+    email: "",
+    teamCategory: 'design'
+  },
+  {
+    id: "design-4",
+    name: "Pragun K Kirani",
+    role: "Design Team",
+    mythologicalTitle: "Design Team",
+    department: "IIITB",
+    phone: "+91 91488 94484",
+    phoneRaw: "+919148894484",
+    photoUrl: pragun,
+    linkedin: "https://www.linkedin.com/in/pragun-k-kirani/",
+    instagram: "https://www.instagram.com/realpragun",
     email: "",
     teamCategory: 'design'
   }
