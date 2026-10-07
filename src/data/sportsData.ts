@@ -258,7 +258,7 @@ export const SPORTS_DATA: Sport[] = [
       "Singles and doubles preliminary rounds are best-of-5 sets; semi-finals and finals are best-of-7 sets (11 points per set).",
       "Two-point advantage required to conclude deuce situations at 10-10.",
       "Only ITTF-approved rubber paddles and non-marking indoor sports shoes are permitted on the court matting.",
-      "Team championship format entails best-of-5 matches (3 Singles and 2 Doubles ties).",
+      "Team championship format entails best-of-5 matches (4 Singles and 1 Doubles ties).",
       "Table assignments and draw sheets will be announced soon."
     ],
     generalRules: GENERAL_TOURNAMENT_RULES,
@@ -267,7 +267,7 @@ export const SPORTS_DATA: Sport[] = [
       "Singles and doubles preliminary rounds are best-of-5 sets; semi-finals and finals are best-of-7 sets (11 points per set).",
       "Two-point advantage required to conclude deuce situations at 10-10.",
       "Only ITTF-approved rubber paddles and non-marking indoor sports shoes are permitted on the court matting.",
-      "Team championship format entails best-of-5 matches (3 Singles and 2 Doubles ties).",
+      "Team championship format entails best-of-5 matches (4 Singles and 1 Doubles ties).",
       "Table assignments and draw sheets will be announced soon.",
       ...GENERAL_TOURNAMENT_RULES
     ],
