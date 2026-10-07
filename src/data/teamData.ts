@@ -146,6 +146,20 @@ export const SPORTS_COMMITTEE: TeamMember[] = [
     instagram: "https://www.instagram.com/",
     email: "Utkarsh.G@iiitb.ac.in",
     teamCategory: 'sports_comm'
+  },
+  {
+    id: "sports-7",
+    name: "Yuktha Marisetti",
+    role: "Sports Comm Member",
+    mythologicalTitle: "Sports Comm Member",
+    department: "IE2025023",
+    phone: "+91 86887 22565",
+    phoneRaw: "+918688722565",
+    photoUrl: yuktha,
+    linkedin: "https://www.linkedin.com/in/",
+    instagram: "https://www.instagram.com/",
+    email: "Marisetti.Sri@iiitb.ac.in",
+    teamCategory: 'sports_comm'
   }
 ];
 
