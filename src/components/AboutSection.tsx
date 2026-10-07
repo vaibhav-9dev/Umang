@@ -2,7 +2,8 @@ import React from 'react';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider } from './GreekDecorations';
 import { UmangLogo } from './UmangLogo';
 import { GENERAL_TOURNAMENT_RULES } from '../data/rulesData';
-import { ShieldCheck, Check } from 'lucide-react';
+import { ShieldCheck, Check, Scroll, ExternalLink } from 'lucide-react';
+import { ALL_SPORT_RULE_LINKS } from '../config/sportRuleLinks';
 import sportsArenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
 
 export const AboutSection: React.FC = () => {
@@ -113,7 +114,7 @@ export const AboutSection: React.FC = () => {
             All participating institutions, contingent captains, and athletes across all sports must adhere strictly to these universal tournament regulations:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-8">
             {GENERAL_TOURNAMENT_RULES.map((rule, idx) => (
               <div
                 key={idx}
@@ -127,6 +128,35 @@ export const AboutSection: React.FC = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Sport Specific Rulebook Hyperlinks */}
+          <div>
+            <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#F5B81C]/25">
+              <Scroll className="w-4 h-4 text-[#F5B81C]" />
+              <h3 className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
+                SPORT SPECIFIC RULEBOOK HYPERLINKS
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {ALL_SPORT_RULE_LINKS.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3.5 bg-[#01040E] border border-[#F5B81C]/30 hover:border-[#F5B81C] hover:bg-[#03091F] transition-all duration-200 flex items-center justify-between gap-3 group cursor-pointer"
+                >
+                  <span className="font-cinzel text-xs font-bold text-[#F8FAFC] group-hover:text-[#FFC72C] transition-colors truncate">
+                    {item.name}
+                  </span>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-cinzel text-[#F5B81C] group-hover:text-[#FFE066] font-semibold shrink-0">
+                    <span className="text-[11px] uppercase tracking-wider">RULES</span>
+                    <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

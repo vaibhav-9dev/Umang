@@ -4,7 +4,8 @@ import { UmangLogo } from '../components/UmangLogo';
 import { useNavigation } from '../context/NavigationContext';
 import { FinalCTA } from '../components/FinalCTA';
 import { GENERAL_TOURNAMENT_RULES } from '../data/rulesData';
-import { ShieldCheck, Check, AlertCircle } from 'lucide-react';
+import { ShieldCheck, Check, AlertCircle, Scroll, ExternalLink } from 'lucide-react';
+import { ALL_SPORT_RULE_LINKS } from '../config/sportRuleLinks';
 import sportsArenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
 import greekStatueImg from '../assets/images/olympus_greek_statue_1790530183863.jpg';
 
@@ -239,6 +240,39 @@ export const AboutPage: React.FC = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Sport Specific Rulebook Hyperlinks Directory */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#F5B81C]/25">
+              <Scroll className="w-4 h-4 text-[#F5B81C]" />
+              <h3 className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
+                SPORT SPECIFIC RULEBOOK HYPERLINKS
+              </h3>
+            </div>
+            <p className="font-sans text-xs text-[#94A3B8] mb-4">
+              Access the official Google Docs rulebooks for each individual sport:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+              {ALL_SPORT_RULE_LINKS.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-[#01040E] border border-[#F5B81C]/30 hover:border-[#F5B81C] hover:bg-[#03091F] transition-all duration-200 flex items-center justify-between gap-3 group cursor-pointer"
+                >
+                  <span className="font-cinzel text-xs sm:text-sm font-bold text-[#F8FAFC] group-hover:text-[#FFC72C] transition-colors truncate">
+                    {item.name}
+                  </span>
+                  <div className="inline-flex items-center gap-1.5 text-xs font-cinzel text-[#F5B81C] group-hover:text-[#FFE066] font-semibold shrink-0">
+                    <span className="text-[11px] uppercase tracking-wider">VIEW RULES</span>
+                    <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Institutional Integrity Notice Box */}

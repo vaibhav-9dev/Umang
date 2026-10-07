@@ -17,6 +17,8 @@ import { openRegistrationForm } from '../config/registrationLinks';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider, GreekMeanderStrip } from '../components/GreekDecorations';
 import { UmangLogo } from '../components/UmangLogo';
 import { useNavigation } from '../context/NavigationContext';
+import { OfficialRulebookModal } from '../components/OfficialRulebookModal';
+import { SPORT_RULE_LINKS } from '../config/sportRuleLinks';
 
 interface SportDetailPageProps {
   sportId: string;
@@ -29,6 +31,16 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
 }) => {
   const { navigateToSports, navigateToHome, navigateToSportDetail } = useNavigation();
   const [selectedGalleryImage, setSelectedGalleryImage] = useState<SportGalleryItem | null>(null);
+  const [activeRuleModalSportId, setActiveRuleModalSportId] = useState<string | null>(null);
+
+  const handleOpenSportRule = (targetSportId: string) => {
+    const external = SPORT_RULE_LINKS[targetSportId];
+    if (external && external.trim() !== '') {
+      window.open(external, '_blank', 'noopener,noreferrer');
+    } else {
+      setActiveRuleModalSportId(targetSportId);
+    }
+  };
 
   // Find sport or fallback to first
   const sport = SPORTS_DATA.find((s) => s.id === sportId) || SPORTS_DATA[0];
@@ -316,29 +328,35 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
             </div>
           </div>
 
-          {/* Sport-Specific Regulations */}
-          {sport.sportSpecificRules && sport.sportSpecificRules.length > 0 && (
-            <div className="mb-8">
-              <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#F5B81C]/25">
-                <Trophy className="w-4 h-4 text-[#F5B81C]" />
-                <h3 className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
-                  {sport.name.toUpperCase()} SPECIFIC REGULATIONS
-                </h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                {sport.sportSpecificRules.map((rule, idx) => (
-                  <div
-                    key={`specific-${idx}`}
-                    className="p-3.5 bg-[#01040E] border border-[#F5B81C]/20 flex items-start gap-3 text-xs leading-relaxed"
-                  >
-                    <div className="w-5 h-5 rounded-none border border-[#F5B81C]/60 bg-[#03091F] flex items-center justify-center font-cinzel text-[10px] font-bold text-[#FFC72C] shrink-0 mt-0.5">
-                      0{idx + 1}
-                    </div>
-                    <p className="text-[#F8FAFC]/90 font-sans">
-                      {rule}
-                    </p>
+          {/* Sport-Specific Official Rulebook Hyperlink */}
+          {SPORT_RULE_LINKS[sport.id] && (
+            <div className="mb-8 p-5 sm:p-6 bg-[#01040E] border-2 border-[#F5B81C] shadow-[0_0_30px_rgba(245,184,28,0.2)] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#F5B81C]/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 relative z-10">
+                <div className="max-w-2xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Trophy className="w-4 h-4 text-[#FFC72C]" />
+                    <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#FFC72C]">
+                      {sport.name.toUpperCase()} OFFICIAL RULEBOOK
+                    </span>
                   </div>
-                ))}
+                  <h3 className="font-cinzel text-xl sm:text-2xl font-black uppercase tracking-[0.12em] text-[#F8FAFC]">
+                    {sport.name} Tournament Rules &amp; Regulations
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm text-[#94A3B8] mt-1.5 leading-relaxed">
+                    Official scoring guidelines, court parameters, match formats, and eligibility rules for {sport.name}. Click the button to access the official document.
+                  </p>
+                </div>
+
+                <a
+                  href={SPORT_RULE_LINKS[sport.id]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#FFC72C] via-[#F5B81C] to-[#E6AA12] hover:brightness-110 active:scale-[0.98] text-[#01040E] font-cinzel text-xs font-extrabold uppercase tracking-[0.2em] shadow-lg shadow-[#F5B81C]/25 transition-all shrink-0 cursor-pointer group"
+                >
+                  <span>OPEN {sport.name.toUpperCase()} RULES</span>
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
             </div>
           )}

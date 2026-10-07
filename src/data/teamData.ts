@@ -21,7 +21,7 @@ import sachin from '../assets/images/sachin.jpeg';
 import vaibhav from '../assets/images/vaibhav.png';
 import bhargava from '../assets/images/bhargava.jpeg';
 import raadhesh from '../assets/images/raadhesh.jpeg';
-import ansh from '../assets/images/anshgupta.jpeg';
+import ansh from '../assets/images/ansh.jpeg';
 import pragun from '../assets/images/pragun.jpeg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
