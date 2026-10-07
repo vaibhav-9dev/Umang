@@ -9,13 +9,13 @@
 import nehamam from '../assets/images/neha.jpeg';
 import srikarImg from '../assets/images/SrikarImg.jpeg';
 import abhiImg from '../assets/images/AbhiRam.jpeg';
-import ajayImg from '../assets/images/Ajay.jpeg';
+
 import yashrajImg from '../assets/images/YashRaj.jpeg';
 import anshImg from '../assets/images/Ansh.png';
 import pratikImg from '../assets/images/Pratik.jpeg';
 import utkarshImg from '../assets/images/Utkarsh.jpeg';
 import yuktha from '../assets/images/yuktha.jpeg';
-import varunImg from '../assets/images/coord_varun_portrait_1790531424265.jpg';
+
 import ayush from '../assets/images/ayush.jpeg';
 import sachin from '../assets/images/sachin.jpeg';
 import vaibhav from '../assets/images/vaibhav.png';
@@ -23,12 +23,6 @@ import bhargava from '../assets/images/bhargava.jpeg';
 import raadhesh from '../assets/images/raadhesh.jpeg';
 import ansh from '../assets/images/ansh.jpeg';
 import pragun from '../assets/images/pragun.jpeg';
-import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
-import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
-import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
-import webLeadImg from '../assets/images/team_web_lead_portrait_1790608705709.jpg';
-import designLeadImg from '../assets/images/team_design_lead_portrait_1790608720586.jpg';
-import frontendDevImg from '../assets/images/team_frontend_portrait_1790608738699.jpg';
 
 export type TeamCategory = 'sports_comm' | 'website' | 'design';
 
