@@ -5,15 +5,15 @@
  * If empty, the app opens the built-in comprehensive official rulebook document.
  */
 export const SPORT_RULE_LINKS: Record<string, string> = {
-  tennis: 'https://docs.google.com/document/d/1kRACQeJhMcODjy3XQP2f9nFrgUlP-zH5KcdGjpkTkkI/edit?usp=drivesdk',
-  throwball: 'https://docs.google.com/document/d/1pKUu5wS1WNQ91bzIPmS7Q-8LSTHnECrIITWl4JWiVbg/edit?usp=drivesdk',
-  chess: 'https://docs.google.com/document/d/1Xzh1HJBYZGidqLDhxh7FDsv2iIXH8pJwDJIq81ohxOs/edit?usp=drivesdk',
-  kabaddi: 'https://docs.google.com/document/d/17jwO4K1VKQA0iAihlJ7UDtBeHk7VAtYxDgX3vBSA47c/edit?usp=drivesdk',
-  volleyball: 'https://docs.google.com/document/d/1VQxA5w4D0MBBkS2tlppf3h6dED3DIO3LIfzLWX2PtNY/edit?usp=drivesdk',
-  football: 'https://docs.google.com/document/d/1e8iGmGGVuzvuIYmo1k4ebpMtu4MCjtn5s8PyxBOcN-c/edit?usp=drivesdk',
-  basketball: 'https://docs.google.com/document/d/1NqZ2wCRWNBuWrWqZM58groFDNK58RY_o/edit?usp=sharing&ouid=106965097086014730182&rtpof=true&sd=true',
-  'table-tennis': 'https://docs.google.com/document/d/1e3LlHk4R1xgk2LEBpthICzBSA-JjkmT_4TuqKJSxYc8/edit?usp=drive_link',
-  badminton: 'https://docs.google.com/document/d/1P1EI6oCfZud2WI_Ie0Ww7e4WGM_amKMK3Phx65HS2ZE/edit?usp=drivesdk',
+  tennis: 'https://docs.google.com/document/d/1nRWUco2f21ilabrugueg3F38gMtIzAUM/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  throwball: 'https://docs.google.com/document/d/1WLWmo2YuZgI6M1zzlasb0WgYLxK7D_k-/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  chess: 'https://docs.google.com/document/d/1c-NsDKJ9zRF8jqNZXKE14bLzH5CXWEMe/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  kabaddi: 'https://docs.google.com/document/d/1CTtHv6PJLikrdL4i9Jr_b8epbTt_rYu0/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  volleyball: 'https://docs.google.com/document/d/19wJ7I8uvjyVKr14FBmHmRhaOW-X-gL8D/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  football: 'https://docs.google.com/document/d/1wueUt9L7LibV0nUmCzlP0XjdFq61H4_f/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  basketball: 'https://docs.google.com/document/d/1NqZ2wCRWNBuWrWqZM58groFDNK58RY_o/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
+  'table-tennis': 'https://docs.google.com/document/d/1TOvIp30naybuFUE6f-sT308jMdFe-Lnz/edit?usp=sharing&ouid=106965097086014730182&rtpof=true&sd=true',
+  badminton: 'https://docs.google.com/document/d/1Chne5x89ICGT6_6TXf_EJ5e7hFrcejkN/edit?usp=drivesdk&ouid=106965097086014730182&rtpof=true&sd=true',
 };
 
 export interface SportRuleLinkItem {
