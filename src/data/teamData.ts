@@ -19,6 +19,7 @@ import yuktha from '../assets/images/yuktha.jpeg';
 import ayush from '../assets/images/ayush.jpeg';
 import sachin from '../assets/images/sachin.jpeg';
 import vaibhav from '../assets/images/vaibhav.png';
+import abhyudaya from '../assets/images/abhyudaya.jpg';
 import bhargava from '../assets/images/bhargava.jpeg';
 import raadhesh from '../assets/images/raadhesh.jpeg';
 import ansh from '../assets/images/ansh.jpeg';
@@ -201,6 +202,20 @@ export const WEBSITE_TEAM: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/vaibhav-kakaraparthi-96335b3a6/",
     instagram: "https://www.instagram.com/",
     email: "Vaibhav.Kakaraparthi@iiitb.ac.in",
+    teamCategory: 'website'
+  },
+  {
+    id: "web-4",
+    name: "Abhyudaya Singh",
+    role: "Website Team",
+    mythologicalTitle: "Website Team",
+    department: "IIITB",
+    phone: "",
+    phoneRaw: "",
+    photoUrl: abhyudaya,
+    linkedin: "https://www.linkedin.com/in/abhyudaya-singh-b84714312/",
+    instagram: "https://www.instagram.com/",
+    email: "abhyudayasingh2409@gmail.com",
     teamCategory: 'website'
   }
 ];
